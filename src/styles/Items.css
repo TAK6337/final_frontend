@@ -1,0 +1,630 @@
+.items-container,
+.items-container * {
+    box-sizing: border-box;
+}
+
+.items-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 10px auto;
+    padding: 10px;
+}
+
+.items-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.items-title {
+    font-size: 2.5rem;
+    margin-top: 95px;
+    margin-bottom: 10px;
+}
+
+.items-description {
+    font-size: 1rem;
+    color: #555;
+}
+
+.items-info-button {
+    background-color: #3f51b5;
+    color: white;
+    padding: 15px 30px; /* padding 값을 더 크게 설정 */
+    font-size: 1.3rem; /* font-size 값을 더 크게 설정 */
+    font-weight: bold; /* 텍스트를 굵게 설정 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.items-info-image {
+    width: 28px; /* 이미지 크기 설정 */
+    height: 28px;
+    margin-left: 13px; /* 텍스트와 이미지 사이의 간격 설정 */
+    margin-bottom: 3px;
+    vertical-align: middle;
+}
+
+.items-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.items-nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.items-nav-item {
+    margin: 0 10px;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    font-weight: 600; /* 글자 굵기 설정 */
+    white-space: nowrap; /* 줄바꿈 방지 */
+}
+
+.items-nav-item.items-active {
+    border-bottom: 2px solid #3f51b5;
+}
+
+.items-section {
+    text-align: center;
+}
+
+.items-subtitle {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+}
+
+.items-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.items-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* 이미지와 텍스트를 중간에 오게 함 */
+    display: flex; /* 플렉스 박스로 변경 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+}
+
+.items-item-image {
+    width: 140px; /* 이미지 사이즈를 늘림 */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.items-item-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.items-item-description,
+.items-item-note,
+.items-item-extra {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* restricted */
+.restricted-container,
+.restricted-container * {
+    box-sizing: border-box;
+}
+
+.restricted-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.restricted-header {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.restricted-list-wrapper {
+    margin-bottom: 10px;
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.transport-container {
+    display: flex; /* 수평 배치를 위해 flex 속성 추가 */
+    flex-direction: row; /* 요소들을 수평으로 배치 */
+    /*gap: 16px; !* 요소 간의 간격 설정 *!*/
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.transport-header {
+    background: #283593;
+    flex-shrink: 0;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 0px 2px 0px 0px;
+    width: 570px;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 텍스트를 가운데 정렬 */
+    padding-left: 10px; /* 텍스트를 왼쪽으로 약간 이동 */
+}
+
+.detailed-transport-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.detailed-transport-item {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0px 2px 2px 0px;
+    flex-shrink: 0;
+    width: 570px;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.detailed-transport-item:last-child {
+    border-right-width: 0px; /* 마지막 항목의 오른쪽 선 추가 */
+}
+
+.electric-container,
+.electric-container * {
+    box-sizing: border-box;
+}
+
+.electric-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.electric-header {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 32px;
+    line-height: 22px;
+    font-weight: 700;
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.electric-description {
+    color: #000000;
+    text-align: left;
+    margin-top: 20px;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.electric-details {
+    display: table;
+    width: 96.6%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    table-layout: fixed;
+}
+
+.electric-section {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.electric-section-header {
+    background: #283593;
+    flex-shrink: 0;
+    width: 380px;
+    height: 84px;
+    position: relative;
+    overflow: hidden;
+}
+
+.electric-section-title {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    position: absolute;
+    left: calc(50% - 56px);
+    top: calc(50% - 11px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.electric-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 760px;
+    position: relative;
+}
+
+.electric-subsection {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.electric-subtitle {
+    background: #283593;
+    border-style: solid;
+    border-color: #eaeaea;
+    border-width: 0px 1px 0px 1px;
+    flex-shrink: 0;
+    width: 380px;
+    height: 42px;
+    position: relative;
+    overflow: hidden;
+}
+
+.electric-subtitle-text {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    position: absolute;
+    left: calc(50% - 37px);
+    top: calc(50% - 11px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.electric-row {
+    border-style: solid;
+    border-color: #5d5d5d;
+    border-width: 0px 0px 1px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.electric-item {
+    border-style: solid;
+    border-color: #5d5d5d;
+    border-width: 0px 1px 0px 0px;
+    flex-shrink: 0;
+    width: 190px;
+    height: 42px;
+    position: relative;
+    overflow: hidden;
+}
+
+.electric-item-text {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    position: absolute;
+    left: calc(50% - 47px);
+    top: calc(50% - 11px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.electric-rules {
+    display: flex;
+    flex-direction: column;
+    border-collapse: collapse;
+}
+
+.electric-rule {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #5d5d5d;
+}
+
+.electric-rule-title {
+    background: #eaeaea;
+    border-width: 0px 0px 0px 0px;
+    border-style: solid;
+    border-color: #000000;
+    width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.electric-rule-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.electric-rule-item {
+    border-width: 0px 0px 0px 1px;
+    border-style: solid;
+    border-color: #000000;
+    width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.electric-note {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.electric-note-text {
+    color: #000000;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.electric-notes-list {
+    text-align: left;
+    color: #000000;
+    list-style-type: disc;
+    padding-left: 1em;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.liquids-item {
+    margin-top: 25px;
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+}
+
+
+.exception-img-box {
+    border-style: solid;
+    border-color: #5d5d5d;
+    border-width: 1px 0px 1px 0px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 100%; /* width를 100%로 변경 */
+    position: relative;
+    overflow: visible; /* 오버플로우가 발생하지 않도록 설정 */
+}
+
+.exception-top, .exception-bottom {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0px 0px 1px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: flex-start; /* align-items: center에서 flex-start로 변경 */
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-wrap: wrap; /* 줄바꿈이 가능하도록 flex-wrap 추가 */
+    position: relative;
+}
+
+.exception-first, .exception-second, .exception-third, .exception-forth {
+    padding: 24px 37px 0px 37px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 100%; /* width를 100%로 변경 */
+    max-width: 560px; /* 최대 너비를 설정하여 너무 넓어지지 않도록 제한 */
+    position: relative;
+    overflow: visible; /* 오버플로우가 발생하지 않도록 설정 */
+}
+
+.pill1-box, .pill2-box, .pill3-box, .pill4-box {
+    display: flex;
+    flex-direction: row;
+    gap: 25px; /* 간격을 20px로 변경 */
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    flex-wrap: wrap; /* 줄바꿈이 가능하도록 flex-wrap 추가 */
+}
+
+
+.pill1, .pill2, .pill3, .pill4 {
+    flex-shrink: 0;
+    width: 84px;
+    height: 84px;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.pill1-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: auto; /* width를 auto로 변경 */
+    position: relative;
+}
+
+.pill1-title, .pill2-title, .pill3-title, .pill4-title {
+    font-weight: bold;
+}
+
+.pill1-info, .pill2-info, .pill3-info, .pill4-info {
+    margin-bottom: 20px;
+}
+
+.pill1-text-box, .pill2-text-box, .pill3-text-box, .pill4-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: auto; /* width를 auto로 변경 */
+    position: relative;
+}
+
+.frame-910 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* 간격을 20px로 변경 */
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    flex-wrap: wrap; /* 줄바꿈이 가능하도록 flex-wrap 추가 */
+}
+
+.warning-container {
+    background: #E8EAF6;
+    padding: 30px 35px 30px 35px;
+    display: flex;
+    flex-direction: column; /* flex-direction을 column으로 변경 */
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: auto; /* height를 auto로 변경 */
+    position: relative;
+    overflow: visible; /* 오버플로우가 발생하지 않도록 설정 */
+}
+
+.warning-box, .warning-title, .warning-info {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    position: relative;
+    list-style-type: disc;
+    padding-left: 1em;
+}

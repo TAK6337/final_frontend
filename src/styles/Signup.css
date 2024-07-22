@@ -1,0 +1,253 @@
+.signup-full-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 15px; /* 화면이 작을 때 좌우 패딩 추가 */
+}
+
+.signup-home-logo {
+    width: 150px; /* 기본 로고 너비 */
+    height: auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.signup-container {
+    background-color: #ffffff;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* 최대 너비 조정 */
+    width: 100%;
+    text-align: center;
+}
+
+.signup-title {
+    color: #3f51b5;
+    margin-bottom: 10px;
+    font-size: 1.7em;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    position: relative;
+    align-items: flex-start; /* 라벨과 입력 박스를 왼쪽 정렬 */
+}
+
+.input-label {
+    margin-bottom: 13px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.input-button-container {
+    display: flex;
+    width: 100%; /* 전체 가로 너비 */
+    align-items: center; /* 입력 박스와 버튼을 세로 가운데 정렬 */
+    margin-bottom: 5px;
+}
+
+.signup-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 96%;
+}
+
+.show-hide-button {
+    position: absolute;
+    right: 3px;
+    top: 60%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    padding: 0;
+    font-size: 16px;
+}
+
+.availability-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3f51b5;
+    color: white;
+    margin-left: 20px; /* 추가된 스타일 */
+    align-self: flex-start; /* 오른쪽 정렬 */
+    width: 40%;
+}
+
+.availability-button:hover {
+    background-color: #0056b3;
+    }
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 8px;
+}
+
+.error-message-container {
+    height: 20px; /* 에러 메시지의 고정된 높이 */
+    margin-top: -5px; /* 위쪽 간격 조정 */
+}
+
+.signup-button:hover {
+    background-color: #0056b3;
+}
+
+.signup-button {
+    position: relative;
+    display: inline-block;
+    background-color: #3f51b5;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.signup-button::before {
+    content: "I love Aivle School You love Aivle School We love Aivle School";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+    animation: scroll-text 7s linear infinite;
+    /*transform: rotate(-4deg); !* Rotate text *!*/
+}
+
+.signup-button span {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes scroll-text {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -100%;
+    }
+}
+
+/* 반응형 스타일 */
+/* 데스크탑(Desktop): 1200px 이상 */
+@media (min-width: 1200px) {
+    .signup-container {
+        max-width: 500px;
+    }
+}
+
+/* 노트북(Laptop): 992px ~ 1199px */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .signup-container {
+        max-width: 400px;
+    }
+
+    .signup-input, .availability-button, .signup-button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* 태블릿(Tablet): 768px ~ 991px */
+@media (max-width: 991px) and (min-width: 768px) {
+    .signup-container {
+        max-width: 90%;
+    }
+
+    .signup-input, .availability-button, .signup-button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* 모바일(Mobile): 767px 이하 */
+@media (max-width: 767px) {
+    .signup-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .signup-input, .availability-button, .signup-button {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
+/* Signup.css에 추가 */
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.modal h2 {
+      color: #3f51b5;
+}
+
+.modal p {
+    margin-bottom: 20px;
+}
+
+.modal-button {
+    width: 150px; /* 버튼 너비 */
+    height: 50px; /* 버튼 높이 */
+    padding: 10px 20px; /* 패딩 */
+    background-color: #3f51b5; /* 배경색 */
+    color: white; /* 글자색 */
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 테두리 반경 */
+    cursor: pointer; /* 커서 */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.modal-button:hover {
+    background-color: #303f9f; /* 마우스 오버 시 배경색 */
+}
+
+.modal-button span {
+    font-weight: bold;
+    font-size: 16px;
+}

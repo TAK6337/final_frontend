@@ -1,0 +1,236 @@
+.mypage,
+.mypage * {
+    box-sizing: border-box;
+}
+
+.mypage {
+    background: #ffffff;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mypage-main-banner {
+    background: #000000;
+    width: 1920px;
+    height: 280px;
+    position: absolute;
+    left: calc(50% - 960px);
+    top: 80px;
+    overflow: hidden;
+}
+
+.mypage-main-banner-text {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    position: absolute;
+    left: 801px;
+    top: calc(50% - 55px);
+}
+
+.mypage-content {
+    width: 520px;
+    height: 355px;
+    position: absolute;
+    left: calc(50% - 260px);
+    top: 447px;
+    overflow: hidden;
+}
+
+.mypage-pw-btn {
+    background: #1a237e;
+    border-radius: 45px;
+    width: 340px;
+    height: 64px;
+    position: absolute;
+    left: calc(50% - 170px);
+    bottom: 0px;
+    cursor: pointer;
+    /* 버튼처럼 보이도록 마우스 포인터 변경 */
+}
+
+.mypage-pw-btn-text {
+    color: #ffffff;
+    text-align: center;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    position: absolute;
+    left: 68px;
+    top: 10px;
+}
+
+.mypage-useremail-input {
+    font-size: 24px;
+    width: 340px;
+    height: 61px;
+    position: absolute;
+    right: 0px;
+    top: 175px;
+}
+
+.mypage-useremail-text {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    position: absolute;
+    left: 0px;
+    top: 168px;
+    width: 160px;
+}
+
+.mypage-username-text {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    position: absolute;
+    left: 0px;
+    top: 91px;
+    width: 160px;
+}
+
+.mypage-username-input {
+    font-size: 36px;
+    width: 340px;
+    height: 61px;
+    position: absolute;
+    right: 0px;
+    top: 90px;
+}
+
+.mypage-content-text {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    position: absolute;
+    left: calc(50% - 89px);
+    top: 0px;
+}
+
+.mypage-pw,
+.mypage-pw * {
+    box-sizing: border-box;
+}
+.mypage-pw {
+    background: rgba(0, 0, 0, 0.25);
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+}
+.mypage-pw-popup {
+    background: #ffffff;
+    width: 408px;
+    height: 540px;
+    position: absolute;
+    left: calc(50% - 204px);
+    top: calc(50% - 270px);
+    box-shadow: 10px 10px 2px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+.mypage-pw-popup-btn {
+    background: #1a237e;
+    border-radius: 10px;
+    width: 368px;
+    height: 54px;
+    position: absolute;
+    left: 20px;
+    bottom: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.mypage-pw-popup-change {
+    border-radius: 7px;
+    border-style: solid;
+    border-color: #adadad;
+    border-width: 1px;
+    width: 271px;
+    height: 40.65px;
+    position: absolute;
+    left: 69px;
+    top: 323.3px;
+    overflow: hidden;
+    padding-left:18px;
+}
+.mypage-pw-popup-current {
+    border-radius: 7px;
+    border-style: solid;
+    border-color: #adadad;
+    border-width: 1px;
+    width: 271px;
+    height: 40.65px;
+    position: absolute;
+    left: 69px;
+    top: 274.65px;
+    overflow: hidden;
+    padding-left:18px;
+}
+.mypage-pw-popup-name {
+    border-radius: 7px;
+    border-style: solid;
+    border-color: #adadad;
+    border-width: 1px;
+    width: 271px;
+    height: 40.65px;
+    position: absolute;
+    left: 69px;
+    top: 226px;
+    overflow: hidden;
+    padding-left:18px;
+}
+.mypage-pw-popup-text {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    position: absolute;
+    left: calc(50% - 93px);
+    top: 143px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.mypage-logo {
+    background: #1a237e;
+    width: 174px;
+    height: 43px;
+    position: absolute;
+    left: calc(50% - 87px);
+    top: 64px;
+}
+.mypage-a-irport {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    position: absolute;
+    left: calc(50% - 45px);
+    top: calc(50% - 16.5px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.popup-close-box {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    overflow: visible;
+}

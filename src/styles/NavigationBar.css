@@ -1,0 +1,382 @@
+.dark-nav-bar,
+.dark-nav-bar * {
+    box-sizing: border-box;
+}
+.dark-nav-bar {
+    height: 240px;
+    position: fixed; /* 절대 위치에서 화면에 고정 */
+    top: 0; /* 화면 상단에 위치 */
+    left: 0; /* 화면 왼쪽에 위치 */
+    right: 0; /* 화면 오른쪽에 위치 */
+    overflow: hidden;
+    z-index: 1000; /* 다른 요소들보다 위에 표시되도록 설정 */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.dark-main-nav-bar-slide {
+    background: rgba(0, 0, 0, 0.5);
+    width: 1920px;
+    height: 160px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+.dark-nav-bar-slide-text {
+    color: #adadad;
+    text-align: center;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    left: calc(50% - 80px);
+    top: calc(50% - 12px);
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-nav-bar-slide-staff {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 160px;
+    height: 138px;
+    position: absolute;
+    left: 768px;
+    top: 6px;
+}
+.dark-nav-bar-slide-staff-1 {
+    flex-shrink: 0;
+    width: 160px;
+    height: 46px;
+    position: relative;
+    overflow: hidden;
+}
+.dark-nav-bar-slide-staff-1:hover .dark-nav-bar-slide-text{
+    color: #ffffff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.dark-nav-bar-slide-staff-2 {
+    flex-shrink: 0;
+    width: 160px;
+    height: 46px;
+    position: relative;
+    overflow: hidden;
+}
+.dark-nav-bar-slide-staff-2:hover .dark-nav-bar-slide-text{
+    color: #ffffff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.dark-nav-bar-slide-staff-3 {
+    flex-shrink: 0;
+    width: 160px;
+    height: 46px;
+    position: relative;
+    overflow: hidden;
+}
+.dark-nav-bar-slide-staff-3:hover .dark-nav-bar-slide-text{
+    color: #ffffff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.dark-nav-bar-slide-customer {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 160px;
+    height: 138px;
+    position: absolute;
+    left: 588px;
+    top: 6px;
+}
+.dark-nav-bar-slide-customer-1 {
+    flex-shrink: 0;
+    width: 160px;
+    height: 46px;
+    position: relative;
+    overflow: hidden;
+}
+.dark-nav-bar-slide-customer-1:hover .dark-nav-bar-slide-text{
+    color: #ffffff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.dark-nav-bar-slide-customer-2 {
+    flex-shrink: 0;
+    width: 160px;
+    height: 46px;
+    position: relative;
+    overflow: hidden;
+}
+.dark-nav-bar-slide-customer-2:hover .dark-nav-bar-slide-text{
+    color: #ffffff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.dark-nav-bar-slide-customer-3 {
+    flex-shrink: 0;
+    width: 160px;
+    height: 46px;
+    position: relative;
+    overflow: hidden;
+}
+.dark-nav-bar-slide-customer-3:hover .dark-nav-bar-slide-text{
+    color: #ffffff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.dark-nav-bar-box {
+    width: 1060px;
+    height: 80px;
+    position: absolute;
+    left: 228px;
+    top: 0px;
+    overflow: hidden;
+}
+.dark-nav-bar-box-icons {
+    width: 70px;
+    height: 20px;
+    position: absolute;
+    left: 990px;
+    top: 30px;
+    overflow: hidden;
+}
+.dark-bar-box-icons-signin {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0px;
+    top: calc(50% - 10px);
+    overflow: visible;
+
+}
+.dark-bar-box-icon-login {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    top: calc(50% - 10px);
+    overflow: visible;
+}
+.dark-nav-bar-box-icons-user-logout {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0px;
+    top: calc(50% - 10px);
+    overflow: visible;
+}
+.dark-nav-bar-box-icons-user-mypage {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0px;
+    top: calc(50% - 10px);
+    overflow: visible;
+}
+.dark-nav-bar-box-staff {
+    width: 160px;
+    height: 80px;
+    position: absolute;
+    left: 362px;
+    top: 0px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+.dark-staff-support {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    left: 38px;
+    top: 28px;
+    transition: font-weight 0.1s ease, transform 0.1s ease;
+
+}
+.dark-bar-box-under-bar {
+    background: #ffffff;
+    width: 160px;
+    height: 2px;
+    position: absolute;
+    left: calc(50% - 80px);
+    bottom: 0px;
+    display: none;
+}
+.dark-nav-bar-box-staff:hover .dark-staff-support {
+    transform: scale(1.1);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.dark-nav-bar-box-staff:hover .dark-bar-box-under-bar {
+    display: block;
+    cursor: pointer;
+}
+.dark-nav-bar-box-customer {
+    width: 160px;
+    height: 80px;
+    position: absolute;
+    left: 182px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+.dark-customer {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    left: 38px;
+    top: 28px;
+    transition: font-weight 0.1s ease, transform 0.1s ease;
+    align-items: center;
+
+
+}
+.dark-nav-bar-box-customer:hover .dark-customer {
+    transform: scale(1.1);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.dark-nav-bar-box-customer:hover .dark-bar-box-under-bar {
+    display: block;
+    cursor: pointer;
+}
+.dark-nav-bar-box-service {
+    width: 160px;
+    height: 80px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+.dark-service-intro {
+    color: #ffffff;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    left: calc(50% - 66px);
+    top: calc(50% - 13px);
+    text-align: center;
+    transition: font-weight 0.1s ease, transform 0.1s ease;
+}
+.dark-service-intro a{
+    width: 120px;
+    position: absolute;
+}
+.dark-nav-bar-box-service:hover .dark-service-intro {
+    transform: scale(1.1);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dark-nav-bar-box-service:hover .dark-bar-box-under-bar {
+    display: block;
+    cursor: pointer;
+}
+.dark-nav-bar-box-logo {
+    width: 160px;
+    height: 80px;
+    position: absolute;
+    overflow: hidden;
+}
+.dark-nav-bar-box-logo:hover{
+    cursor: pointer;
+}
+.dark-a-irport {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    position: absolute;
+    left: calc(50% - 67px);
+    top: calc(50% - 25px);
+}
+
+.dark-nav-bar-frame {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 1920px   ;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+}
+
+/* 기본적으로 dark-main-nav-bar-slide는 숨겨져 있어야 합니다. */
+.dark-main-nav-bar-slide {
+    transform: scaleY(0); /* 초기 상태: 높이 0 */
+    transform-origin: top; /* 위쪽에서 시작하도록 설정 */
+    transition: transform 0.2s ease-out; /* 애니메이션 효과 */
+    overflow: hidden; /* 콘텐츠가 넘치면 숨김 */
+    /* 슬라이드의 높이는 고정하지 않고 컨텐츠의 높이에 따라 조절 */
+}
+
+/* 슬라이드가 보이도록 설정하는 클래스 */
+.dark-main-nav-bar-slide.dark-visible {
+
+    transform: scaleY(1); /* 슬라이드가 보이도록 설정 */
+    /* 필요에 따라 다른 스타일 설정 */
+
+}
+.dark-nav-bar-box-content {
+    width: 522px;
+    height: 80px;
+    position: absolute;
+    left: 178px;
+    top: 0px;
+    overflow: hidden;
+}
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 텍스트 색상 상속 (부모 요소의 색상 사용) */
+    background: none; /* 배경 제거 */
+    border: none; /* 테두리 제거 */
+    padding: 0; /* 패딩 제거 */
+    margin: 0; /* 마진 제거 */
+    font: inherit; /* 폰트 스타일 상속 */
+    cursor: default; /* 커서 스타일 기본값으로 설정 */
+    box-shadow: none; /* 그림자 제거 */
+    transition: none; /* 애니메이션 효과 제거 */
+    outline: none; /* 포커스시 외곽선 제거 */
+}
+a:hover {
+    cursor: pointer ;
+}
+
+.dark-nav-bar.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.dark-nav-bar.visible {
+    transform: translateY(0);
+    opacity: 1;
+}

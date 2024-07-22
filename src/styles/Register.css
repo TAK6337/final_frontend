@@ -1,0 +1,473 @@
+.register,
+.register * {
+    box-sizing: border-box;
+}
+
+.register {
+    background: #ffffff;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+}
+
+.lost-register-upload {
+    border-radius: 7px;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    width: 830px;
+    height: 545px;
+    position: absolute;
+    left: calc(50% - 415px);
+    top: 360px;
+    overflow: hidden;
+}
+
+
+.lost-register-upload-info-input {
+    border-radius: 7px;
+    border-style: solid;
+    border-color: #5d5d5d;
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 340px;
+    height: 294px;
+    position: absolute;
+    left: 470px;
+    top: 156px;
+}
+
+.item-name {
+    border-style: solid;
+    border-color: #5d5d5d;
+    border-width: 0px 0px 1px 0px;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 51px;
+    position: relative;
+    overflow: hidden;
+}
+
+.item-name-input {
+    color: #adadad;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    left: 52px;
+    top: calc(50% - 11.5px);
+    width: 274px;
+    border: none; /* 테두리 제거 */
+    background: none; /* 배경 제거 */
+    outline: none; /* 포커스 시 생기는 외곽선 제거 */
+}
+
+.item-name-input::placeholder {
+    color: #adadad; /* 플레이스홀더 텍스트 색상 */
+}
+
+.item-name-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: calc(50% - 157px);
+    top: calc(50% - 12.5px);
+    overflow: visible;
+}
+
+.found-location {
+    border-style: solid;
+    border-color: #5d5d5d;
+    border-width: 0px 0px 1px 0px;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 51px;
+    position: relative;
+    overflow: hidden;
+}
+
+.found-location-input {
+    color: #adadad;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    right: 14px;
+    top: calc(50% - 11.5px);
+    width: 274px;
+    border: none; /* 테두리 제거 */
+    background: none; /* 배경 제거 */
+    outline: none; /* 포커스 시 생기는 외곽선 제거 */
+}
+.found-location-input::placeholder {
+    color: #adadad; /* 플레이스홀더 텍스트 색상 */
+}
+
+.found-location-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: calc(50% - 157px);
+    top: calc(50% - 12.5px);
+    overflow: visible;
+}
+
+.post-content {
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 192px;
+    position: relative;
+    overflow: hidden;
+}
+
+.post-content-textarea {
+    color: #adadad;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    width: 274px;
+    height: 164px;
+    border: none; /* 테두리 제거 */
+    background: none; /* 배경 제거 */
+    outline: none; /* 포커스 시 생기는 외곽선 제거 */
+    resize: none; /* 크기 조절 제거 */
+}
+
+.post-content-textarea::placeholder {
+    color: #adadad; /* 플레이스홀더 텍스트 색상 */
+}
+
+.post-content-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: calc(50% - 157px);
+    top: calc(50% - 83px);
+    overflow: visible;
+}
+
+.lost-register-upload-info-auto {
+    border-radius: 7px;
+    border-style: solid;
+    border-color: #5d5d5d;
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 340px;
+    position: absolute;
+    left: 470px;
+    top: 20px;
+}
+
+.item-category {
+    border-style: solid;
+    border-color: #5d5d5d;
+    border-width: 0px 0px 1px 0px;
+    padding: 13px 14px 13px 14px;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.item-category-input {
+    color: #5d5d5d;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    left: 52px;
+    top: 13px;
+    width: 274px;
+    border: none; /* 테두리 제거 */
+    background: none; /* 배경 제거 */
+    outline: none; /* 포커스 시 생기는 외곽선 제거 */
+}
+
+.item-category-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 14px;
+    top: 13px;
+    overflow: visible;
+}
+
+.register-date {
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 51px;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-date-input {
+    color: #5d5d5d;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    left: 52px;
+    top: calc(50% - 11.5px);
+    width: 274px;
+    border: none; /* 테두리 제거 */
+    background: none; /* 배경 제거 */
+    outline: none; /* 포커스 시 생기는 외곽선 제거 */
+    resize: none; /* 크기 조절 제거 */
+}
+.register-date-input::placeholder {
+    color: #adadad; /* 플레이스홀더 텍스트 색상 */
+}
+
+
+.calendar-check-01 {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: calc(50% - 157px);
+    top: calc(50% - 11.5px);
+    overflow: visible;
+}
+
+.lost-register-upload-lost-image {
+    border-radius: 7px;
+    border-style: solid;
+    border-color: #5d5d5d;
+    border-width: 1px;
+    width: 430px;
+    height: 430px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    overflow: hidden;
+}
+
+.lost-register-upload-lost-image-frame {
+    border-radius: 7px;
+    border-style: dashed;
+    border-color: #5d5d5d;
+    border-width: 1px;
+    width: 390px;
+    height: 390px;
+    position: absolute;
+    left: calc(50% - 195px);
+    top: calc(50% - 195px);
+    overflow: hidden;
+}
+
+.lost-register-upload-lost-image-frame-icon {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: calc(50% - 18px);
+    top: calc(50% - 18px);
+    overflow: visible;
+}
+
+.lost-register-upload-lost-image-frame-text {
+    color: #5d5d5d;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    position: absolute;
+    left: calc(50% - 88px);
+    top: calc(50% - 153px);
+}
+
+.lost-register-upload-lost-image-info-text {
+    color: #5d5d5d;
+    text-align: center;
+    font-family: "NotoSans-DisplayRegular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    left: 115px;
+    top: 295px;
+    width: 200px;
+}
+
+.lost-register-upload-lost-image-btn {
+    background: #3f51b5;
+    border-radius: 45px;
+    padding: 4px 16px 4px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    position: absolute;
+    left: 135px;
+    top: 355px;
+    overflow: hidden;
+}
+
+.lost-register-upload-lost-image-btn-text {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+}
+
+.lost-register-banner {
+    width: 1920px;
+    height: 320px;
+    position: absolute;
+    left: calc(50% - 960px);
+    top: 0px;
+    overflow: hidden;
+
+    background-color: black;
+}
+
+.lost-register-banner-title {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-SemiBold", sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    position: absolute;
+    left: calc(50% - 156px);
+    top: calc(50% - 43px);
+}
+
+.lost-register-banner-crumbs {
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 1px 0px 1px 0px;
+    width: 1920px;
+    height: 48px;
+    position: absolute;
+    left: -1px;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+.banner-crumbs-lost-register {
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 0px 1px 0px 0px;
+    padding: 12px 24px 12px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    left: 782px;
+    top: 1.5px;
+}
+
+.banner-crumbs-lost-register-text {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+}
+
+.banner-crumbs-lost {
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 0px 2px 0px 0px;
+    padding: 12px 12px 12px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 556px;
+    top: 0px;
+}
+
+.banner-crumbs-lost-text {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+}
+
+.chevron-right {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+}
+
+.banner-crumbs-icon {
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 0px 2px 0px 2px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    left: 508px;
+    top: 0.5px;
+    overflow: hidden;
+}
+
+.luggage-01 {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+}
+
+.submit-btn {
+    background: #3f51b5;
+    border-radius: 45px;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    position: absolute;
+    left: calc(50% - 125px); /* 50% - (버튼 너비의 절반) */
+    bottom: 20px;
+    overflow: hidden;
+
+    color: #ffffff;
+    text-align: center;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    border: none; /* 테두리 제거 */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+}
+
+.submit-btn:hover {
+    color: #1a237e;
+    background: #ffffff; /* 호버 시 배경색 변경 */
+    border: #1a237e;
+}

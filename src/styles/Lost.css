@@ -1,0 +1,757 @@
+.lost,
+.lost * {
+    box-sizing: border-box;
+}
+.lost {
+    background: #ffffff;
+    width: 100%;
+    height: 930px;
+    position: relative;
+    overflow-x: auto; /* x축 스크롤 자동 생성 */
+    overflow-y: visible; /* y축 스크롤 표시로 변경 */
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+.lost-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    max-width: 1200px; /* 예시, 필요에 따라 조정 */
+    width: 100%;
+    box-sizing: border-box; /* padding, border 포함 */
+}
+
+.lost-top {
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 360px;
+    position: relative;
+    overflow: visible;
+}
+.lost-top-shadow {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 360px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+.lost-top-main {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 12px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 1100px;
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* 부모의 가로 중앙에 위치하도록 설정 */
+    transform: translateX(-50%); /* 요소의 중앙을 부모의 중앙에 맞추도록 이동 */
+}
+.lost-top-btn-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 398px;
+    position: relative;
+}
+.lost-top-btn-title {
+    color: #ffffff;
+    text-align: center;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    align-self: stretch;
+}
+.lost-top-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.lost-top-btns-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+.lost-btn {
+    background: #3f51b5;
+    border-radius: 45px;
+    padding: 0px 14px 0px 14px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+.lost-btn-type {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-DisplayLight", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+}
+.lost-btn2 {
+    background: #ffffff;
+    border-radius: 45px;
+    padding: 0px 14px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* 부드러운 색상 전환 */
+}
+
+.lost-btn2:hover {
+    background: #3f51b5; /* 호버 시 배경색 변경 */
+}
+
+.lost-btn-type2 {
+    color: #000000; /* 기본 글자색 */
+    text-align: left;
+    font-family: "NotoSans-DisplayLight", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+    transition: color 0.3s ease; /* 글자색 부드러운 전환 */
+}
+
+.lost-btn2:hover .lost-btn-type2 {
+    color: #ffffff; /* 호버 시 글자색 변경 */
+}
+
+.line-31 {
+    margin-top: -2px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 2px 0 0 0;
+    flex-shrink: 0;
+    width: 850px;
+    height: 0px;
+    position: relative;
+}
+.lost-date-cate {
+    display: flex;
+    flex-direction: row;
+    gap: 84px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+.lost-date {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+.lost-date-start {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 6px 12px 6px 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+.lost-date-start-placeholder {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.calendar-frame {
+    background: #3f51b5;
+    border-radius: 10px;
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.calendar {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+}
+.lost-date-ing {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 500;
+    position: relative;
+}
+.lost-date-end {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 6px 12px 6px 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+.lost-date-end-placeholder {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.calendar2 {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+
+}
+.lost-calendar-popup {
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 9999; /* 다른 요소 위에 오도록 z-index 설정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    /* 달력의 사이즈 줄이기 */
+    width: 400px; /* 원하는 너비 설정 */
+    height: 350px; /* 높이는 내용에 맞게 자동 설정, 고정 높이 필요 시 지정 가능 */
+    /*max-height: 400px; !* 최대 높이 설정, 필요에 따라 조정 가능 *!*/
+}
+
+.lost-cate {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 6px 12px 6px 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+.lost-cate-rfs {
+    display: flex;
+    gap: 10px; /* 요소들 사이에 10px 간격 */
+    flex-wrap: wrap; /* 요소가 부모 컨테이너를 넘어가면 자동으로 줄바꿈 */
+}
+.lost-cate-placeholder {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 500;
+    position: relative;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap;
+    border:none;
+}
+.search-frame {
+    background: #3f51b5;
+    border-radius: 10px;
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    cursor:pointer;
+}
+.search {
+    color: #ffffff;
+    text-align: left;
+    font-family: "FontAwesome5Free-Solid", sans-serif;
+    font-size: 21px;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    position: relative;
+}
+.lost-title {
+    color: #ffffff;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    position: absolute;
+    left: calc(50% - 117px);
+    top: calc(45% - 86px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+
+}
+.lost-police {
+    background: rgba(232, 234, 246, 0.5);
+    padding: 32px 80.5px 32px 80.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    overflow: auto;
+}
+.lost-police-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+
+}
+.lost-police-ex {
+    text-align: center;
+    font-family: "-", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    width: 939px;
+    height: 44px;
+}
+.lost-police-ex-span {
+    color: #000000;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.lost-police-ex-span2 {
+    color: #3f51b5;
+    font-family: "NotoSans-DisplayBold", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.lost-to-police-btn {
+    background: #ffffff;
+    border-style: solid;
+    border-color: #5d5d5d;
+    border-width: 1px;
+    padding: 6px 12px 6px 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+.lost-to-police-btn-text {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+.lost-main-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 1102px;
+    position: relative;
+}
+.lost-main-frame-cate {
+    border-style: solid;
+    border-color: #3f51b5;
+    border-width: 2px 0px 1px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.lost-main-frame-category-container {
+    flex-shrink: 0;
+    width: 250px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+}
+.lost-main-frame-category {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    left: calc(50% - 15px);
+    top: calc(50% - 11px);
+}
+.lost-main-frame-dot {
+    background: #adadad;
+    border-radius: 45px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    right: 0px;
+    top: 28px;
+    overflow: hidden;
+}
+.lost-main-frame-name-container {
+    flex-shrink: 0;
+    width: 300px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+}
+.lost-main-frame-name {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    left: calc(50% - 23px);
+    top: calc(50% - 11px);
+}
+.lost-main-frame-place-container {
+    flex-shrink: 0;
+    width: 300px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+}
+.lost-main-frame-place {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    left: calc(50% - 30px);
+    top: calc(50% - 11px);
+}
+.lost-main-frame-date-container {
+    flex-shrink: 0;
+    width: 250px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+}
+.lost-main-frame-date {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    left: calc(50% - 23px);
+    top: calc(50% - 11px);
+}
+.lost-main-frame-result-container {
+    flex-shrink: 0;
+    width: 200px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+}
+.lost-main-frame-result {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    left: calc(50% - 30px);
+    top: calc(50% - 11px);
+}
+.lost-main-frame-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.lost-main-frame-items {
+    display: flex; /* Flexbox를 사용하여 아이템들을 가로로 정렬 */
+    flex-wrap: wrap; /* 필요시 아이템을 여러 줄에 걸쳐 정렬 */
+}
+
+.frame-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 0px;
+
+
+}
+
+/* 각 아이템 내부의 텍스트를 가운데 정렬 */
+
+.lost-item-box {
+    flex-shrink: 0;
+    width: 250px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* 세로 정렬 */
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    cursor:pointer;
+    background :white;
+    border:none;
+}
+.lost-item-box-div {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Light", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.lost-item-get {
+    flex-shrink: 0;
+    width: 300px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* 세로 정렬 */
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    white-space: nowrap;
+    cursor:pointer;
+}
+.lost-item-get-div {
+    color: #000000;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; /* 부모 요소에 꽉 차게 */
+    height: 100%; /* 부모 요소에 꽉 차게 */
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.lost-item-place-box {
+    flex-shrink: 0;
+    width: 300px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* 세로 정렬 */
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    cursor:pointer;
+}
+.lost-item-place {
+    display: flex;
+    flex-direction: row;
+    gap: 8px; /* 필요에 따라 간격 조정 */
+    align-items: center; /* 세로 정렬 */
+    justify-content: center; /* 가로 정렬 */
+    position: absolute;
+    left: 50%; /* 부모 요소의 중앙 정렬 */
+    transform: translateX(-50%); /* 중앙 정렬을 위한 위치 조정 */
+    top: 19px; /* 원래 위치 유지 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.marker-pin-01 {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+}
+.lost-item-place-div {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Light", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+}
+.lost-item-date-box {
+    flex-shrink: 0;
+    width: 250px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* 세로 정렬 */
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    cursor:pointer;
+}
+.lost-item-date {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Light", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    position: absolute;
+    left: 50%; /* 부모 요소의 중앙 정렬 */
+    transform: translateX(-50%); /* 중앙 정렬을 위한 위치 조정 */
+    white-space: nowrap;
+}
+
+.lost-page {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.lost-left-arrow, .lost-right-arrow {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.lost-left-double, .lost-left, .lost-right, .lost-right-double {
+    font-weight: bold;
+    font-size: 24px; /* 아이콘의 크기를 통일 */
+    vertical-align: middle; /* 아이콘이 세로로 정렬되도록 */
+    cursor: pointer;
+}
+
+
+
+.page-button {
+    display: inline-block;
+    border-radius: 45px;
+    padding: 10px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.page-number {
+    color: black; /* Set the color of the number */
+}
+
+.page-button.active-page {
+    background-color: #3f51b5; /* Example active page background color */
+}
+
+.active-page {
+    color: white; /* Example active page number color */
+}
+
+.page-button:hover {
+    background-color: #ccc;
+}
+
+.ellipsis {
+    color: #999; /* 회색으로 표시 */
+    padding: 5px 10px;
+    cursor: default; /* 포인터 제거 */
+}
+
+.calendar-refresh {
+    border: none;  /* 버튼 테두리 제거 */
+    background: none;  /* 버튼 배경 제거 */
+    padding: 0;  /* 기본 패딩 제거 */
+    cursor: pointer;  /* 커서를 포인터로 변경 */
+}

@@ -1,0 +1,542 @@
+.home-div,
+.home-div * {
+    box-sizing: border-box;
+}
+.home-div {
+    background: #ffffff;
+    width: 1200px;
+    height: 1648px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0 auto; /* 중앙 정렬 */
+    display: flex;
+
+}
+.home-content {
+    padding: 0px 0px 80px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 1140px;
+    position: absolute;
+    left: calc(50% - 570px);
+    top: 160px;
+}
+.time-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    transition: opacity 0.3s ease-in-out;
+}
+.time-middle.active {
+    animation: slide-in 0.5s ease-out forwards; /* 0.5초 동안 ease-out 가속도로 slide-in 애니메이션 적용 */
+}
+.time-middle.inactive {
+    animation: slide-out 0.5s ease-out forwards; /* 비활성화 상태일 때 opacity를 0으로 설정하여 페이드 아웃 */
+}
+@keyframes slide-in {
+    0% { transform: translateX(100%); } /* 시작 위치 설정 */
+    100% { transform: translateX(0); } /* 최종 위치 설정 */
+}
+@keyframes slide-out {
+    0% { transform: translateX(-100%); } /* 시작 위치 설정 */
+    100% { transform: translateX(0); } /* 최종 위치 설정 */
+}
+.time-middle-title {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    font-family: "Inter-ExtraLight", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+.time-main-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 이미지와 span을 세로 중앙 정렬 */
+    justify-content: center; /* 이미지와 span을 가로 중앙 정렬 */
+    position: relative;
+}
+.time-image-container {
+    position: relative; /* 이미지 컨테이너에 position 설정 */
+}
+.time-image {
+    width: 100%; /* 이미지가 컨테이너에 꽉 차게 */
+    height: auto; /* 비율 유지를 위해 auto */
+    display: block; /* inline 요소가 아니라 block 요소로 처리 */
+}
+.time-time-container {
+    position: absolute;
+    top: 45%; /* 부모 요소의 상단에서 45% 지점에 배치 */
+    left: 50%; /* 부모 요소의 왼쪽에서 50% 지점에 배치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬을 위한 transform */
+    display: flex; /* 내부 요소들을 가로로 배치하기 위해 flex 사용 */
+    align-items: center; /* 수직 정렬을 위해 센터 정렬 */
+    color: #000000; /* 텍스트 색상 */
+    font-family: "Inter-Regular", sans-serif; /* 글꼴 */
+    font-size: 80px; /* 텍스트 크기 */
+    font-weight: 400; /* 텍스트 굵기 */
+}
+
+.time-time-span {
+    margin-right: 0px; /* 숫자와 "분" 사이 간격 조정 */
+}
+
+.time-time-span2 {
+    font-size: 48px; /* "분" 텍스트 크기 */
+    font-weight: 400; /* "분" 텍스트 굵기 */
+    text-transform: uppercase; /* 대문자 변환 */
+    /*align-self: flex-end;*/
+    margin-top: 20px;
+}
+.time-move-btn {
+    position: absolute;
+    top: 50%; /* 버튼을 이미지와 텍스트 중앙에 배치 */
+    right: -150px; /* 오른쪽으로 100px 이동 */
+    transform: translateY(-50%); /* 수직 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.time-move-btn2 {
+    position: absolute;
+    top: 50%; /* 버튼을 이미지와 텍스트 중앙에 배치 */
+    left: -150px; /* 오른쪽으로 100px 이동 */
+    transform: translateY(-50%); /* 수직 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.time-move-btn .time-next {
+    width: 72px;
+    height: 72px;
+}
+.time-btn-frame {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    position: absolute;
+    bottom: 0px; /* 아래에서부터 10px 떨어진 위치로 조정 */
+    right: 0px; /* 오른쪽에서부터 10px 떨어진 위치로 조정 */
+    width: 150px; /* 원하는 너비로 조정 */
+    border :none;
+    background-color: #ffffff;
+    cursor :pointer;
+}
+.time-btn-text {
+    color: #5d5d5d;
+    text-align: center;
+    font-family: "NotoSans-DisplayLight", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+.time-refresh {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    overflow: visible;
+}
+.home-sub-content-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 818px;
+    position: relative;
+}
+.home-sub-content-1-description {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+.home-sub-content-1-rect {
+    background: #e8eaf6;
+    border-radius: 10px;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    position: relative;
+    overflow: hidden;
+}
+.home-sub-content-1-text {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Light", sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    position: relative;
+}
+
+.home-sub-content-1-main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.home-sub-content-1-line {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.home-sub-content-1-container {
+    background: rgba(232, 234, 246, 0.5);
+    border-radius: 10px;
+    flex-shrink: 0;
+    width: 400px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    /*cursor : pointer;*/
+}
+.home-sub-content-1-container-description {
+    width: 352px;
+    height: 32px;
+    position: absolute;
+    left: calc(50% - 176px);
+    top: calc(50% - 16px);
+    overflow: hidden;
+}
+.home-sub-content-1-container-text-1 {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Light", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    left: 0px;
+    top: 3.5px;
+}
+.home-sub-content-1-container-right {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    right: 0px;
+    top: calc(50% - 16px);
+}
+.home-sub-content-1-container-image {
+    background: #ffe7e7;
+    border-radius: 10px;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+}
+.home-arrow-box {
+    background: #acacac;
+    border-radius: 10px;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+}
+.home-arrow-narrow-right {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    overflow: visible;
+}
+
+.home-sub-content-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 804px;
+    position: relative;
+}
+.home-sub-content-2-main {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+.home-sub-content-2-rect {
+    background: #e8eaf6;
+    border-radius: 10px;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    position: relative;
+    overflow: hidden;
+}
+.home-sub-content-2-text {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Light", sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    position: relative;
+}
+.home-sub-content-2-container {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.home-sub-content-2-container-description {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+.home-sub-content-2-container-description-top {
+    background: rgba(232, 234, 246, 0.5);
+    border-radius: 10px 10px 0px 0px;
+    flex-shrink: 0;
+    width: 260px;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+}
+.home-sub-content-2-container-description-top-container {
+    width: 220px;
+    height: 120px;
+    position: absolute;
+    left: calc(50% - 110px);
+    bottom: 0px;
+    overflow: hidden;
+}
+.home-article {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 220px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.home-article-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.home-article-top-left {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+.home-bell-box {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);*/
+}
+.home-bell {
+    width: 60.59%;
+    height: 69.27%;
+    position: absolute;
+    right: 19.09%;
+    left: 20.31%;
+    bottom: 15.11%;
+    top: 15.62%;
+    overflow: visible;
+}
+.home-broad-text-box {
+    background: #ffffff;
+    border-radius: 2px;
+    padding: 2px 4px 2px 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+.home-broad-text {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Light", sans-serif;
+    font-size: 8px;
+    line-height: 12px;
+    font-weight: 300;
+    position: relative;
+}
+.home-sub-container-2-date {
+    color: #505050;
+    text-align: left;
+    font-family: "NotoSans-Light", sans-serif;
+    font-size: 8px;
+    font-weight: 300;
+    position: relative;
+}
+.home-dots-vertical {
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    overflow: visible;
+}
+.home-article-title {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    position: relative;
+    width: 189px;
+    white-space: nowrap;
+}
+.home-sub-content-2-container-description-image {
+    border-radius: 0px 0px 10px 10px;
+    flex-shrink: 0;
+    width: 260px;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.home-sub-content-2-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+.home-sub-content-2-box {
+    background: rgba(232, 234, 246, 0.5);
+    border-radius: 10px;
+    flex-shrink: 0;
+    width: 260px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.home-sub-content-2-description {
+    width: 240px;
+    height: 24px;
+    position: absolute;
+    left: calc(50% - 120px);
+    top: calc(50% - 12px);
+    overflow: hidden;
+}
+.home-sub-content-2-text2 {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Light", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    position: absolute;
+    left: 0px;
+    top: calc(50% - 8px);
+}
+.home-sub-content-2-link {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    right: 0px;
+    top: calc(50% - 8px);
+}
+.home-sub-content-2-link-text {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Light", sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    position: relative;
+}
+.home-arrow-narrow-right5 {
+
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    overflow: visible;
+}
+
+.home-footer {
+    background: #f5f5f5;
+    width: 1920px;
+    height: 160px;
+    position: absolute;
+    left: calc(50% - 960px);
+    bottom: 0px;
+    overflow: hidden;
+}
+.home-footer-content {
+    background: #d5d5d5;
+    width: 1140px;
+    height: 160px;
+    position: absolute;
+    left: calc(50% - 570px);
+    top: calc(50% - 80px);
+    overflow: hidden;
+}

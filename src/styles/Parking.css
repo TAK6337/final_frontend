@@ -1,0 +1,37 @@
+.parking-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.parking-fees-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.parking-fees-table th,
+.parking-fees-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.parking-fees-table th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.parking-fees-table td {
+    text-align: center;
+}
+
+.loading-message,
+.error-message {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.error-message {
+    color: red;
+}

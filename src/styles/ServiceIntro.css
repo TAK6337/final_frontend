@@ -1,0 +1,212 @@
+.serviceintro-div,
+.serviceintro-div * {
+    box-sizing: border-box;
+}
+
+.serviceintro-div {
+    background: #ffffff;
+    width: 100%;
+    max-width: 1900px;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0 auto; /* 중앙 정렬 */
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    padding: 100px 20px 20px; /* 상단에 100px 마진 추가 */
+    padding-top: 120px; /* 추가 */
+}
+
+.serviceintro-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 980px;
+    padding: 20px;
+}
+
+.serviceintro-up,
+.serviceintro-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.serviceintro-title-explain,
+.serviceintro-bottom-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1000px;
+}
+
+.serviceintro-title,
+.serviceintro-bottom-title,
+.serviceintro-bottom-3-part-title,
+.serviceintro-bottom-2-part-title {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-DisplayRegular", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.serviceintro-explain,
+.serviceintro-bottom-explain,
+.serviceintro-content-explain {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-DisplayExtraLight", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.serviceintro-content-divide {
+    border-top: 1px solid #000000;
+    width: 100%;
+}
+
+.serviceintro-bottom-3-part,
+.serviceintro-bottom-2-part {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center; /* 중앙 정렬로 수정 */
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 852px;
+}
+
+.serviceintro-bottom-3-part {
+    margin-bottom: 60px; /* 아래에 간격 추가 */
+}
+
+.serviceintro-bottom-3-part-content,
+.serviceintro-bottom-2-part-content {
+    display: flex;
+    gap: 48px;
+    justify-content: center; /* 중앙 정렬로 수정 */
+    width: 100%;
+}
+
+.serviceintro-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.serviceintro-image-icon,
+.serviceintro-image-icon2,
+.serviceintro-image-icon3,
+.serviceintro-image-icon4,
+.serviceintro-image-icon5 {
+    width: 101px;
+    height: 100px;
+}
+
+.serviceintro-content-title {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.serviceintro-content-explain {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Light", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    position: relative;
+    width: 252px;
+}
+
+.serviceintro-bottom-2-part {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center; /* 중앙 정렬로 수정 */
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 100%; /* 수정 */
+    position: relative;
+    max-width: 552px; /* 추가 */
+    margin: 0 auto; /* 중앙 정렬을 위한 margin 추가 */
+}
+
+@media (max-width: 1200px) {
+    .serviceintro-main-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .serviceintro-main-content,
+    .serviceintro-bottom-3-part-content,
+    .serviceintro-bottom-2-part-content {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .serviceintro-title,
+    .serviceintro-bottom-title,
+    .serviceintro-bottom-3-part-title,
+    .serviceintro-bottom-2-part-title {
+        font-size: 24px;
+    }
+
+    .serviceintro-explain,
+    .serviceintro-bottom-explain,
+    .serviceintro-content-explain {
+        font-size: 14px;
+    }
+}
+
+.serviceintro-bottom-2-part-title {
+    color: #000000;
+    text-align: center;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    position: relative;
+    align-self: stretch;
+}
+
+.serviceintro-bottom-2-part-content {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    align-items: center; /* 중앙 정렬로 수정 */
+    justify-content: center; /* 중앙 정렬 추가 */
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+@media (max-width: 576px) {
+    .serviceintro-title,
+    .serviceintro-bottom-title,
+    .serviceintro-bottom-3-part-title,
+    .serviceintro-bottom-2-part-title {
+        font-size: 20px;
+    }
+
+    .serviceintro-explain,
+    .serviceintro-bottom-explain,
+    .serviceintro-content-explain {
+        font-size: 12px;
+    }
+}
