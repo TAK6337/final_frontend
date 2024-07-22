@@ -6,6 +6,7 @@ function Parking() {
     const [parkingData, setParkingData] = useState([]); // 초기값을 빈 배열로 설정
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false); // 모달창 상태 추가
 
     useEffect(() => {
         const fetchParkingData = async () => {
@@ -28,40 +29,56 @@ function Parking() {
         fetchParkingData();
     }, []);
 
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <div className="parking-container">
             <h1>Parking Fees Information</h1>
+            <button onClick={openModal} className="open-modal-button">Open Parking Fees</button>
             {loading && <p className="loading-message">Loading...</p>}
             {error && <p className="error-message">Error: {error}</p>}
-            {parkingData.length > 0 && (
-                <table className="parking-fees-table">
-                    <thead>
-                    <tr>
-                        <th>Type</th>
-                        <th>Base Fee</th>
-                        <th>Base Time</th>
-                        <th>Hourly Fee</th>
-                        <th>Additional Fee</th>
-                        <th>Additional Time</th>
-                        <th>Daily Fee</th>
-                        <th>Free Time</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {parkingData.map((item, index) => (
-                        <tr key={index}>
-                            <td>{item.type}</td>
-                            <td>{item.base_fee ? `${item.base_fee} 원` : 'N/A'}</td>
-                            <td>{item.base_time || 'N/A'}</td>
-                            <td>{item.hourly_fee ? `${item.hourly_fee} 원` : 'N/A'}</td>
-                            <td>{item.additional_fee ? `${item.additional_fee} 원` : 'N/A'}</td>
-                            <td>{item.additional_time || 'N/A'}</td>
-                            <td>{item.daily_fee ? `${item.daily_fee} 원` : 'N/A'}</td>
-                            <td>{item.free_time || 'N/A'}</td>
-                        </tr>
-                    ))}
-                    </tbody>
-                </table>
+            {isModalOpen && (
+                <div className="modal-overlay" onClick={closeModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <button className="close-modal-button" onClick={closeModal}>X</button>
+                        {parkingData.length > 0 && (
+                            <table className="parking-fees-table">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Base Fee</th>
+                                    <th>Base Time</th>
+                                    <th>Hourly Fee</th>
+                                    <th>Additional Fee</th>
+                                    <th>Additional Time</th>
+                                    <th>Daily Fee</th>
+                                    <th>Free Time</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {parkingData.map((item, index) => (
+                                    <tr key={index}>
+                                        <td>{item.type}</td>
+                                        <td>{item.base_fee ? `${item.base_fee} 원` : 'N/A'}</td>
+                                        <td>{item.base_time || 'N/A'}</td>
+                                        <td>{item.hourly_fee ? `${item.hourly_fee} 원` : 'N/A'}</td>
+                                        <td>{item.additional_fee ? `${item.additional_fee} 원` : 'N/A'}</td>
+                                        <td>{item.additional_time || 'N/A'}</td>
+                                        <td>{item.daily_fee ? `${item.daily_fee} 원` : 'N/A'}</td>
+                                        <td>{item.free_time || 'N/A'}</td>
+                                    </tr>
+                                ))}
+                                </tbody>
+                            </table>
+                        )}
+                    </div>
+                </div>
             )}
         </div>
     );
