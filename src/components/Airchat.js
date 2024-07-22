@@ -26,7 +26,6 @@ function Airchat() {
 
     return (
         <div>
-            <NavigationBar />
             <div className="airchat-container">
                 <h1 className="subtitle">항공편 정보</h1> {/* 큰 제목 추가 */}
                 {loading && <p className="loading-message">Loading...</p>}
