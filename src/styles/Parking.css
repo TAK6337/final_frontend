@@ -13,12 +13,13 @@
 
 .parking-fees-table th,
 .parking-fees-table td {
-    border: 1px solid #ddd;
+    border: 1px solid #7f8c8d;
     padding: 8px;
 }
 
 .parking-fees-table th {
-    background-color: #f2f2f2;
+    background-color: #3f51b5;
+    color: white;
     text-align: center;
 }
 
