@@ -23,6 +23,10 @@ const IdInquiry = () => {
         navigate('/');
     };
 
+    const handleGoLogin = () => {
+        navigate('/Login');
+    };
+
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             event.preventDefault();
@@ -134,8 +138,8 @@ const IdInquiry = () => {
                             아이디의 일부만 제공됩니다.
                         </div>
                     </div>
-                    <div className="pi-IdInquiry-popup-btn" onClick={handleGoHome}>
-                        <div className="pi-IdInquiry-popup-btn-text">홈페이지로 돌아가기</div>
+                    <div className="pi-IdInquiry-popup-btn" onClick={handleGoLogin}>
+                        <div className="pi-IdInquiry-popup-btn-text">로그인으로 돌아가기</div>
                     </div>
                 </div>
             </div>

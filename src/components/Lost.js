@@ -230,20 +230,20 @@ function Lost() {
                                 <div className="lost-top-btn-title"># 가장 많이 찾는 분실물 태그</div>
                                 <div className="lost-top-btns">
                                     <div className="lost-top-btns-2">
-                                        <div className="lost-btn2" onClick={() => handleTagClick('고양이')}>
-                                            <div className="lost-btn-type2">고양이</div>
+                                        <div className="lost-btn2" onClick={() => handleTagClick('지갑')}>
+                                            <div className="lost-btn-type2">지갑</div>
                                         </div>
-                                        <div className="lost-btn2" onClick={() => handleTagClick('멍멍이')}>
-                                            <div className="lost-btn-type2">멍멍이</div>
-                                        </div>
-                                        <div className="lost-btn2" onClick={() => handleTagClick('삐약이')}>
-                                            <div className="lost-btn-type2">삐약이</div>
-                                        </div>
-                                        <div className="lost-btn2" onClick={() => handleTagClick('팽귄')}>
-                                            <div className="lost-btn-type2">팽귄</div>
+                                        <div className="lost-btn2" onClick={() => handleTagClick('휴대전화')}>
+                                            <div className="lost-btn-type2">휴대전화</div>
                                         </div>
                                         <div className="lost-btn2" onClick={() => handleTagClick('가방')}>
                                             <div className="lost-btn-type2">가방</div>
+                                        </div>
+                                        <div className="lost-btn2" onClick={() => handleTagClick('의류')}>
+                                            <div className="lost-btn-type2">의류</div>
+                                        </div>
+                                        <div className="lost-btn2" onClick={() => handleTagClick('이어폰')}>
+                                            <div className="lost-btn-type2">이어폰</div>
                                         </div>
                                     </div>
                                 </div>

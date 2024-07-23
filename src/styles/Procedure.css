@@ -5,7 +5,7 @@
 .home-div {
     background: #ffffff;
     width: 1200px;
-    height: 1648px;
+    height: 2800px;
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -23,7 +23,7 @@
     width: 1140px;
     position: absolute;
     left: calc(50% - 570px);
-    top: 240px;
+    top: 160px;
 }
 .time-middle {
     display: flex;
@@ -539,4 +539,298 @@
     left: calc(50% - 570px);
     top: calc(50% - 80px);
     overflow: hidden;
+}
+
+
+.frame-1139,
+.frame-1139 * {
+    box-sizing: border-box;
+}
+.frame-1139 {
+    background: #ffffff;
+    padding: 0px 420px 0px 420px;
+    height: 1949px;
+    position: relative;
+    overflow: hidden;
+    top:250px;
+}
+.frame-1140 {
+    width: 797px;
+    height: 1909px;
+    position: absolute;
+    left: 186px;
+    top: 0px;
+    overflow: hidden;
+}
+.procedure-text-explain-img {
+    border-radius: 25px;
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    left: 0px;
+    top: 129px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.procedure-text-explain-img2 {
+    border-radius: 25px;
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    left: 0px;
+    top: 443px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.procedure-text-explain-img3 {
+    border-radius: 25px;
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    left: 0px;
+    top: 757px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.procedure-text-explain-img4 {
+    border-radius: 25px;
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    left: 0px;
+    top: 1071px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.procedure-text-explain-img5 {
+    border-radius: 25px;
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    left: 0px;
+    top: 1385px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.procedure-text-explain-img6 {
+    border-radius: 25px;
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    left: 0px;
+    top: 1699px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.procedure-text-explain-text {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    left: 257px;
+    top: 129px;
+}
+.procedure-text-explain-text2 {
+    color: #000000;
+    text-align: right;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    left: 265px;
+    top: 443px;
+}
+.procedure-text-explain-text3 {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    left: 257px;
+    top: 757px;
+}
+.procedure-text-explain-text4 {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    left: 257px;
+    top: 1071px;
+}
+.procedure-text-explain-text5 {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    left: 257px;
+    top: 1385px;
+}
+.procedure-text-explain-text6 {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    left: 257px;
+    top: 1699px;
+}
+.procedure-text-explain-text-sub {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    left: 257px;
+    top: 186px;
+}
+.procedure-text-explain-text-sub2 {
+    color: #000000;
+    text-align: left;
+    font-family: "-", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    position: absolute;
+    left: 257px;
+    top: 238px;
+}
+.procedure-text-explain-text-sub-2-span {
+    color: #000000;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+.procedure-text-explain-text-sub-2-span2 {
+    color: #000000;
+    list-style-type: disc;
+    padding-left: 1em;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+.procedure-text-explain-text-sub3 {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    left: 257px;
+    top: 500px;
+}
+.procedure-text-explain-text-sub4 {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    left: 257px;
+    top: 814px;
+}
+.procedure-text-explain-text-sub5 {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    left: 257px;
+    top: 1128px;
+}
+.procedure-text-explain-text-sub6 {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    left: 257px;
+    top: 1442px;
+}
+.procedure-text-explain-text-sub7 {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    left: 257px;
+    top: 1756px;
+}
+.procedure-text-explain-title-2 {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    position: absolute;
+    left: 179px;
+    top: 0px;
+    width: 398px;
+}
+.procedure-text-explain-title {
+    color: #5d5d5d;
+    text-align: center;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    left: calc(50% - 219.5px);
+    top: 44px;
+    width: 398px;
+}
+
+
+.procedure-ai-title,
+.procedure-ai-title * {
+    box-sizing: border-box;
+}
+.procedure-ai-title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+.procedure-ai-title-sub-1 {
+    color: #5c6bc0;
+    text-align: center;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+}
+.procedure-ai-title-main {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Bold", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    position: relative;
+}
+.procedure-ai-title-sub-2 {
+    color: #959595;
+    text-align: center;
+    font-family: "Inter-ExtraLight", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    position: relative;
+}
+
+.procedure-time-now {
+    color: #1A237E;
+    font-size: 24px;
+    font-weight: bold;
 }
