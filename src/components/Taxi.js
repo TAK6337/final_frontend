@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../styles/Taxi.css';
@@ -79,7 +79,16 @@ function Taxi() {
         }
     }, [isOn2]); // isOn2가 변경될 때마다 실행
 
+    const videoRef = useRef(null);
 
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.muted = true; // 무음으로 설정
+            videoRef.current.play().catch(error => {
+                console.error('자동 재생 오류:', error);
+            });
+        }
+    }, []);
 
     return (
         <div className="taxi-div">
@@ -103,13 +112,18 @@ function Taxi() {
                                 <div className="taxi-effect-text">Effects : On</div>
                             </div>
                             <div className="taxi-video">
-                                <video className="taxi-video-player" src="/images/uploaded_video.mp4" autoPlay muted
-                                       loop></video>
+                                {/*<video className="taxi-video-player" src="/images/uploaded_video.mp4" autoPlay muted*/}
+                                {/*       loop></video>*/}
+                                <video className="taxi-video-player"
+                                       ref={videoRef} width="640" height="360" controls>
+                                    <source src="/videos/taxi/uploaded_video.mp4" type="video/mp4"/>
+                                    브라우저가 동영상을 지원하지 않습니다.
+                                </video>
                             </div>
                         </div>
                         <div className="taxi-middle-right">
                             <div className="taxi-waiting">
-                            <div className="taxi-waiting-frame">
+                                <div className="taxi-waiting-frame">
                                     <div className="taxi-waiting-container">
                                         <div className="taxi-waiting-container-left">
                                             <div className="taxi-waiting-text">대기승객</div>

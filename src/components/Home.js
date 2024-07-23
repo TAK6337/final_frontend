@@ -15,7 +15,7 @@ function Home() {
         '/images/testimages/intro_05.jpg'
     ];
     const texts = [
-        '스마트 공항 솔루션',
+        '여정을 함께 만드는 AI ASSISTANT \n 이동부터 비행기 탑승까지 편리하게',
         '분실물 서비스',
         '택시승강장관리 자동화',
         '체크인, 보안검사 대기시간 예측',

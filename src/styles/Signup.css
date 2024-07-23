@@ -95,7 +95,7 @@
 
 .error-message {
     color: red;
-    font-size: 12px;
+    font-size: 8px;
     text-align: left;
     margin-top: 8px;
 }
@@ -103,6 +103,7 @@
 .error-message-container {
     height: 20px; /* 에러 메시지의 고정된 높이 */
     margin-top: -5px; /* 위쪽 간격 조정 */
+    font-size: 8px;
 }
 
 .signup-button:hover {

@@ -67,7 +67,7 @@ const Signup = ({ agreed }) => {
     const handlePasswordBlur = () => {
         const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
         if (password1 && !passwordRegex.test(password1)) {
-            setPasswordError('비밀번호는 최소 8자, 문자, 숫자, 특수문자를 포함해야 합니다.');
+            setPasswordError('비밀번호는 최소 10-16자리 대/소/특수문자/숫자 중 2가지 이상을 포함해야 합니다');
         } else {
             setPasswordError('');
         }
@@ -167,7 +167,7 @@ const Signup = ({ agreed }) => {
                         <label className="input-label">아이디 입력</label>
                         <input
                             type="text"
-                            placeholder="아이디를 입력해주세요."
+                            placeholder="아이디는 3~16자의 영문, 숫자, 밑줄, 하이픈만 가능합니다."
                             className="signup-input"
                             value={userID}
                             onChange={handleUsernameChange}
@@ -199,7 +199,7 @@ const Signup = ({ agreed }) => {
                         <label className="input-label">비밀번호 입력</label>
                         <input
                             type={showPassword1 ? "text" : "password"}
-                            placeholder="비밀번호를 입력해주세요."
+                            placeholder="10-16자리 대/소/특수문자/숫자 중 2가지 이상을 포함해야 합니다."
                             className="signup-input"
                             value={password1}
                             onChange={handlePasswordChange}

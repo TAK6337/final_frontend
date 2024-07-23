@@ -22,6 +22,10 @@ const PwInquiry = () => {
         navigate('/');
     };
 
+    const handleGoLogin = () => {
+        navigate('/Login');
+    };
+
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             event.preventDefault();
@@ -72,7 +76,7 @@ const PwInquiry = () => {
                     <div className="pi-div3">비밀번호 찾기</div>
                     <div className="pi-line-32"></div>
                     <div className="pi-div4">
-                        회원님의 아이디와 이메일을 입력해주세요
+                        회원님의 이름과 아이디를 입력해주세요
                     </div>
                 </div>
                 <div className="pi-find-id-UserId">
@@ -126,7 +130,7 @@ const PwInquiry = () => {
                         </div>
                     </div>
                     <div className="pi-Pwinquiry-popup-btn" onClick={handleGoHome}>
-                        <div className="pi-Pwinquiry-popup-btn-text">홈페이지로 돌아가기</div>
+                        <div className="pi-Pwinquiry-popup-btn-text">로그인으로 돌아가기</div>
                     </div>
                 </div>
             </div>
