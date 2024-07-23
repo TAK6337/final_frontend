@@ -1,0 +1,62 @@
+.side-nav-btn,
+.side-nav-btn * {
+    box-sizing: border-box;
+}
+.side-nav-btn {
+    width: 89px;
+    height: 340px;
+    position: fixed;
+    overflow: hidden;
+    right: 50px;
+    top:calc(50% - 72px);
+}
+.side-nav-btn-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 89px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.frame-1132 {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+}
+.side-nav-btn-item-text {
+    color: #000000;
+    text-align: center;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+    position: relative;
+    align-self: stretch;
+}
+.side-nav-btn-air {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 89px;
+    position: absolute;
+    left: 0px;
+    top: 115px;
+}
+.side-nav-btn-park {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 89px;
+    position: absolute;
+    left: 0px;
+    top: 230px;
+}

@@ -19,7 +19,7 @@
     height: 545px;
     position: absolute;
     left: calc(50% - 415px);
-    top: 360px;
+    top: 320px;
     overflow: hidden;
 }
 
@@ -330,24 +330,38 @@
 
 .lost-register-banner {
     width: 1920px;
-    height: 320px;
+    height: 160px;
+    position: absolute;
+    left: calc(50% - 960px);
+    top: 80px;
+    overflow: hidden;
+
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/public/images/images/testimages/intro_02.jpg");*/
+    background-size: cover; /* 이미지가 컨테이너에 맞게 조절됩니다 */
+    background-position: center; /* 이미지가 가운데에 위치합니다 */
+    text-align: center; /* 다른 내용이 있을 경우 가운데 정렬 */
+}
+.register-nav-container
+{
+    width: 1920px;
+    height: 80px;
     position: absolute;
     left: calc(50% - 960px);
     top: 0px;
     overflow: hidden;
-
     background-color: black;
+
 }
 
 .lost-register-banner-title {
     color: #ffffff;
     text-align: left;
     font-family: "NotoSans-SemiBold", sans-serif;
-    font-size: 64px;
+    font-size: 32px;
     font-weight: 600;
     position: absolute;
-    left: calc(50% - 156px);
-    top: calc(50% - 43px);
+    left: calc(50% - 85px);
+    top: calc(50% - 24px);
 }
 
 .lost-register-banner-crumbs {
@@ -470,4 +484,61 @@
     color: #1a237e;
     background: #ffffff; /* 호버 시 배경색 변경 */
     border: #1a237e;
+}
+
+.bread-crumb,
+.bread-crumb * {
+    box-sizing: border-box;
+}
+.bread-crumb {
+    background: #f3f4fa;
+    border-style: solid;
+    border-color: #3f51b5;
+    border-width: 2px 0px 2px 0px;
+    top:240px;
+    height: 42px;
+    position: relative;
+    overflow: hidden;
+}
+.bread-crumb-02 {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0px 1px 0px 0px;
+    width: 126px;
+    height: 42px;
+    position: absolute;
+    left: 520px;
+    top: calc(50% - 21px);
+    overflow: hidden;
+}
+.bread-crumb-text-2 {
+    color: #000000;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    left: calc(50% - 40px);
+    top: calc(50% - 11px);
+}
+.bread-crumb-01 {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0px 1px 0px 1px;
+    width: 175px;
+    height: 42px;
+    position: absolute;
+    left: 344.5px;
+    top: calc(50% - 21px);
+    overflow: hidden;
+}
+.bread-crumb-text-1 {
+    color: #5d5d5d;
+    text-align: left;
+    font-family: "NotoSans-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    left: calc(50% - 63.5px);
+    top: calc(50% - 11px);
 }
