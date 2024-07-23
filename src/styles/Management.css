@@ -5,7 +5,7 @@
 .ad-div {
     background: #ffffff;
     width: 100%;
-    height: 1300px;
+    height: 200vh;
     position: relative;
     overflow-x: auto; /* x축 스크롤 자동 생성 */
     overflow-y: hidden; /* y축 스크롤 숨김 */
@@ -148,6 +148,21 @@
     position: fixed;
     top: 4%;
     left: 40%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 9999; /* 다른 요소 위에 오도록 z-index 설정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    /* 달력의 사이즈 줄이기 */
+    width: 400px; /* 원하는 너비 설정 */
+    height: 300px; /* 높이는 내용에 맞게 자동 설정, 고정 높이 필요 시 지정 가능 */
+    /*max-height: 400px; !* 최대 높이 설정, 필요에 따라 조정 가능 *!*/
+}
+.manage-calendar-popup2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
     border-radius: 10px;

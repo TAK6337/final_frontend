@@ -5,10 +5,10 @@
 .lost {
     background: #ffffff;
     width: 100%;
-    height: 930px;
+    height: 150vh;
     position: relative;
     overflow-x: auto; /* x축 스크롤 자동 생성 */
-    overflow-y: visible; /* y축 스크롤 표시로 변경 */
+    overflow-y: auto; /* y축 스크롤 표시로 변경 */
     display: flex; /* Flexbox 사용 */
     justify-content: center; /* 가로 중앙 정렬 */
     align-items: center; /* 세로 중앙 정렬 */

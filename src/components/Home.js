@@ -8,11 +8,11 @@ function Home() {
     const [currentPage, setCurrentPage] = useState(1);
     const [textVisible, setTextVisible] = useState(false);
     const images = [
-        '/images/images/testimages/intro_01.jpg',
-        '/images/images/testimages/intro_02.jpg',
-        '/images/images/testimages/intro_03.jpg',
-        '/images/images/testimages/intro_04.jpg',
-        '/images/images/testimages/intro_05.jpg'
+        '/images/testimages/intro_01.jpg',
+        '/images/testimages/intro_02.jpg',
+        '/images/testimages/intro_03.jpg',
+        '/images/testimages/intro_04.jpg',
+        '/images/testimages/intro_05.jpg'
     ];
     const texts = [
         '스마트 공항 솔루션',

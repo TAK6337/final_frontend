@@ -155,12 +155,12 @@ function Taxi() {
                                         <div className="taxi-service-condition">{data.aiStatus === 'running' ? '정상' : '비정상'}</div>
                                     </div>
                                     <div className="taxi-btn-container">
-                                        <div className="taxi-btn-frame">
-                                            <div className="taxi-btn-ex">택시호출</div>
-                                            <div className={`taxi-slide-btn ${isOn ? 'taxi-slide-btn-on' : ''}`} onClick={handleToggle}>
-                                                <div className={`taxi-slider ${isOn ? 'taxi-slider-on' : ''}`}></div>
-                                            </div>
-                                        </div>
+                                        {/*<div className="taxi-btn-frame">*/}
+                                        {/*    <div className="taxi-btn-ex">택시호출</div>*/}
+                                        {/*    <div className={`taxi-slide-btn ${isOn ? 'taxi-slide-btn-on' : ''}`} onClick={handleToggle}>*/}
+                                        {/*        <div className={`taxi-slider ${isOn ? 'taxi-slider-on' : ''}`}></div>*/}
+                                        {/*    </div>*/}
+                                        {/*</div>*/}
                                         <div className="taxi-btn-frame">
                                             <div className="taxi-btn-ex">서비스 작동</div>
                                             <div

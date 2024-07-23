@@ -89,6 +89,9 @@ const Login = () => {
         // 카카오 로그인 URL 생성
         const authUrl = `https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}`;
 
+        // URL을 콘솔에 출력
+        console.log('Kakao Auth URL:', authUrl);
+
         // 카카오 인증 페이지로 리디렉션
         window.location.href = authUrl;
     };

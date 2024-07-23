@@ -71,38 +71,19 @@ function Lost() {
     };
 
 // 아이템 배치 Fetch
-    const fetchItemsBatch = useCallback(async (ids) => {
-        try {
-            const requests = ids.map(id => axios.get(`/lost-items/${id}`, {
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            }));
-            const responses = await Promise.all(requests);
-            return responses.map(response => response.data).filter(data => data && data.lostID);
-        } catch (err) {
-            console.error('Error fetching items batch:', err);
-            throw err;
-        }
-    }, []);
-
-// Fetch 아이템
+    // Fetch 아이템
     useEffect(() => {
         const fetchItems = async () => {
             setLoading(true);
             setError(null);
 
-            const maxId = 50;
-            const batchSize = 20;
-            const ids = Array.from({ length: maxId }, (_, i) => i + 1);
-
             try {
-                const results = [];
-                for (let i = 0; i < ids.length; i += batchSize) {
-                    const batchIds = ids.slice(i, i + batchSize);
-                    const batchItems = await fetchItemsBatch(batchIds);
-                    results.push(...batchItems);
-                }
+                const response = await axios.get('/lost-items/all', {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+                const results = response.data;
                 setItems(results); // 전체 아이템 상태 업데이트
                 setFilteredItems(results); // 초기화된 상태로 설정
             } catch (error) {
@@ -114,7 +95,8 @@ function Lost() {
         };
 
         fetchItems();
-    }, [fetchItemsBatch]);
+    }, []);
+
 
 // 페이지 번호 가져오기
     const getPageNumbers = () => {

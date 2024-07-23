@@ -1,99 +1,93 @@
 import React, { useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import qs from 'qs';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+import userState from '../utils/userstate';  // 올바른 경로로 수정합니다.
 
 const OAuthRedirect = () => {
-    const location = useLocation();
     const navigate = useNavigate();
+    const location = useLocation();
+    const setUser = useSetRecoilState(userState);
 
     useEffect(() => {
-        const queryParams = new URLSearchParams(location.search);
-        const provider = queryParams.get('provider');;
-        const code = queryParams.get('code');
+        const handleOAuthLogin = async (code) => {
+            try {
+                console.log('Authorization code:', code);
 
-        if (provider && code) {
-            handleOAuthLogin(provider, code);
+                // 카카오 액세스 토큰 요청
+                const tokenResponse = await getKakaoAccessToken(code);
+
+                // 전체 응답에서 access_token 추출
+                const accessToken = tokenResponse.access_token;
+                console.log('Access token:', accessToken);
+
+                // 백엔드로 토큰 전송
+                const response = await axios.post('/auth/social-login', null, {
+                    params: {
+                        provider: 'kakao',
+                        token: accessToken,
+                    },
+                });
+
+                console.log('Backend response:', response.data);
+
+                if (response.status === 200) {
+                    // 로컬스토리지에 토큰 저장
+                    localStorage.setItem('token', accessToken);
+
+                    // alert('소셜 로그인 성공');
+                    setUser(response.data); // 성공 시 Recoil 상태 업데이트
+                    navigate('/'); // 로그인 성공 후 리디렉션
+                } else {
+                    alert('소셜 로그인 실패');
+                    navigate('/error'); // 로그인 실패 시 에러 페이지로 리디렉션
+                }
+            } catch (error) {
+                console.error('OAuth login failed', error);
+                alert('소셜 로그인 실패');
+                navigate('/error'); // 로그인 실패 시 에러 페이지로 리디렉션
+            }
+        };
+
+        const getKakaoAccessToken = async (code) => {
+            try {
+                const response = await axios.post(
+                    'https://kauth.kakao.com/oauth/token',
+                    new URLSearchParams({
+                        grant_type: 'authorization_code',
+                        client_id: '160902b869d905d3e51e7580bdd12709', // 카카오 애플리케이션의 REST API 키
+                        redirect_uri: 'http://localhost:3000/oauth', // 리디렉션 URI
+                        code, // 전달된 authorization code
+                    }).toString(), // URLSearchParams를 사용하여 인코딩
+                    {
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded', // 요청 본문 형식
+                        },
+                    }
+                );
+
+                // 전체 응답 데이터 반환
+                console.log('Kakao Access Token Data:', response.data);
+                return response.data; // 전체 응답 데이터 반환
+            } catch (error) {
+                console.error('Failed to get Kakao access token', error.response ? error.response.data : error.message);
+                throw error;
+            }
+        };
+
+        // URL에서 authorization code 추출
+        const params = new URLSearchParams(location.search);
+        const code = params.get('code');
+
+        if (code) {
+            handleOAuthLogin(code);
         } else {
-            console.error('Invalid provider or code');
+            alert('Authorization code not found');
+            navigate('/error'); // 코드가 없을 시 에러 페이지로 리디렉션
         }
-    }, [location.search]);
+    }, [location, navigate, setUser]);
 
-    const handleOAuthLogin = async (provider, code) => {
-        try {
-            let token;
-            if (provider === 'kakao') {
-                token = await getKakaoAccessToken(code);
-            } else if (provider === 'google') {
-                token = await getGoogleAccessToken(code);
-            } else {
-                console.error('Unsupported provider');
-                return;
-            }
-
-            const response = await axios.post(`/auth/social-login`, {provider,  token });
-            console.log(response.status)
-            if (response.status === 200) {
-                alert('Login successful');
-
-            } else {
-                alert('Login failed');
-            }
-        } catch (error) {
-            console.error('OAuth login failed', error);
-            alert('Login failed');
-        }
-    };
-
-    const getKakaoAccessToken = async (code) => {
-        console.log(code)
-        try {
-            const response = await axios.post('https://kauth.kakao.com/oauth/token', qs.stringify, {
-                params: {
-                    grant_type: 'authorization_code',
-                    client_id: '160902b869d905d3e51e7580bdd12709',
-                    redirect_uri: 'http://localhost:3000/oauth2/kakao/callback',
-                    code
-                },
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                }
-            });
-
-            return response.data.access_token;
-        } catch (error) {
-            console.error('Failed to get Kakao access token', error);
-            throw error;
-        }
-    };
-
-    const getGoogleAccessToken = async (code) => {
-        try {
-            const response = await axios.post('https://oauth2.googleapis.com/token', null, {
-                params: {
-                    grant_type: 'authorization_code',
-                    client_id: 'YOUR_GOOGLE_CLIENT_ID',
-                    client_secret: 'YOUR_GOOGLE_CLIENT_SECRET',
-                    redirect_uri: 'YOUR_GOOGLE_REDIRECT_URI',
-                    code
-                },
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                }
-            });
-
-            return response.data.access_token;
-        } catch (error) {
-            console.error('Failed to get Google access token', error);
-            throw error;
-        }
-    };
-
-    return (
-        <div>
-            <h2>Processing OAuth Login...</h2>
-        </div>
-    );
+    return null; // 이 컴포넌트는 UI를 렌더링하지 않습니다.
 };
 
 export default OAuthRedirect;

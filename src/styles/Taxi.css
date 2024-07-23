@@ -324,7 +324,7 @@
 .taxi-service {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Gap을 줄여서 항목 간의 간격을 줄임 */
+    gap: 50px; /* Gap을 줄여서 항목 간의 간격을 줄임 */
     align-items: flex-start;
     justify-content: flex-start;
     width: 200px; /* 서비스 영역의 너비를 늘려서 상태 텍스트와 버튼이 모두 보이도록 함 */
@@ -355,18 +355,19 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: flex-end;
+    justify-content: flex-end;
     width: 100%; /* 버튼 컨테이너의 너비를 조정하여 버튼들이 중앙에 오도록 함 */
     position: relative;
+    top : 40px;
 }
 
 .taxi-btn-frame {
     display: flex;
     flex-direction: row;
     gap: 20px; /* 버튼 간의 간격을 줄임 */
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-end;
+    justify-content: flex-end;
     width: 100%;
     position: relative;
 }

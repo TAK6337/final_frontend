@@ -136,40 +136,20 @@ function Management() {
     };
 
 // Fetch Items Batch
-    const fetchItemsBatch = useCallback(async (ids) => {
-        try {
-            const requests = ids.map(id => axios.get(`/lost-items/${id}`, {
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            }));
-            const responses = await Promise.all(requests);
-            return responses.map(response => response.data).filter(data => data && data.lostID);
-        } catch (err) {
-            console.error('Error fetching items batch:', err);
-            throw err;
-        }
-    }, []);
-
-// Fetch Items
     useEffect(() => {
         const fetchItems = async () => {
             setLoading(true);
             setError(null);
 
-            const maxId = 50;
-            const batchSize = 5; // 한 번에 요청할 ID 수
-            const ids = Array.from({length: maxId}, (_, i) => i + 1);
-
             try {
-                const results = [];
-                for (let i = 0; i < ids.length; i += batchSize) {
-                    const batchIds = ids.slice(i, i + batchSize);
-                    const batchItems = await fetchItemsBatch(batchIds);
-                    results.push(...batchItems);
-                }
-                setFilteredItems(results);
-                setItems(results); // items 상태 업데이트
+                const response = await axios.get('/lost-items/all', {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+                const results = response.data;
+                setItems(results); // 전체 아이템 상태 업데이트
+                setFilteredItems(results); // 초기화된 상태로 설정
             } catch (error) {
                 setError('An error occurred while fetching items.');
                 console.error('Error fetching items:', error);
@@ -179,7 +159,7 @@ function Management() {
         };
 
         fetchItems();
-    }, [fetchItemsBatch]);
+    }, []);
 
 // SelectedItem 변경 시 이미지 URL 새로 불러옴
     useEffect(() => {
@@ -565,7 +545,7 @@ function Management() {
                                     <img className="calendar2" src="/images/calendar.png" alt="calendar"/>
                                 </div>
                                 {showStartDateCalendar && (
-                                    <div className="manage-calendar-popup" ref={calendarRef}>
+                                    <div className="manage-calendar-popup2" ref={calendarRef}>
                                         <Calendar onChange={handleStartDateChange} value={startDate}/>
                                     </div>
                                 )}
@@ -579,7 +559,7 @@ function Management() {
                                     <img className="calendar2" src="/images/calendar.png" alt="calendar"/>
                                 </div>
                                 {showEndDateCalendar && (
-                                    <div className="manage-calendar-popup" ref={calendarRef}>
+                                    <div className="manage-calendar-popup2" ref={calendarRef}>
                                         <Calendar onChange={handleEndDateChange} value={endDate}/>
                                     </div>
                                 )}
