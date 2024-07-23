@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../styles/Taxi.css';
 import NavigationBar from '../components/NavigationBar';
+import SideNavBtn from "./SideNavBtn";
 
 function Taxi() {
     const [isOn, setIsOn] = useState(false);
@@ -93,6 +94,7 @@ function Taxi() {
     return (
         <div className="taxi-div">
             <NavigationBar />
+            <SideNavBtn/>
             <div className="taxi-entire">
                 <div className="taxi-top">
                     <div className="taxi-subtitle">service monitoring</div>

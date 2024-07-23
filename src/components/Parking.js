@@ -28,9 +28,9 @@ function Parking({ closeModal }) {
     }, []);
 
     return (
-        <div className="modal-overlay" onClick={closeModal}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                <button className="close-modal-button" onClick={closeModal}>X</button>
+        <div className="park-modal-overlay" onClick={closeModal}>
+            <div className="park-modal-content" onClick={(e) => e.stopPropagation()}>
+                <button className="close-park-modal-button" onClick={closeModal}>X</button>
                 <h1>주차 요금 안내</h1>
                 {loading && <p className="loading-message">Loading...</p>}
                 {error && <p className="error-message">Error: {error}</p>}

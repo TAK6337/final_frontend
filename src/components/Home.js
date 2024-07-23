@@ -2,6 +2,7 @@ import '../styles/Home.css';
 import React, { useState, useEffect } from 'react';
 import {Link} from "react-router-dom";
 import NavigationBar from "./NavigationBar";
+import SideNavBtn from "./SideNavBtn";
 
 
 function Home() {
@@ -46,6 +47,7 @@ function Home() {
     return (
         <div>
             <NavigationBar/>
+            <SideNavBtn/>
             <div className="ServiceIntroFrame">
                 <div className="slide-test-btn-frame">
                     {[1, 2, 3, 4, 5].map((pageNumber) => (

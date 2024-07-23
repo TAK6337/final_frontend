@@ -24,8 +24,8 @@ function Airchat({ closeModal }) {
     }, []);
 
     return (
-        <div className="modal-overlay" onClick={closeModal}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div className="air-modal-overlay" onClick={closeModal}>
+            <div className="air-modal-content" onClick={(e) => e.stopPropagation()}>
                 <button className="close-air-button" onClick={closeModal}>X</button>
                 <h1 className="subtitle">항공편 정보</h1>
                 {loading && <p className="loading-message">Loading...</p>}

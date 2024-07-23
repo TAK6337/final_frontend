@@ -8,7 +8,7 @@
 }
 
 .signup-home-logo {
-    width: 150px; /* 기본 로고 너비 */
+    width: 250px; /* 기본 로고 너비 */
     height: auto;
     margin-bottom: 15px;
     cursor: pointer;
@@ -93,7 +93,7 @@
     background-color: #0056b3;
     }
 
-.error-message {
+.sign-error-message {
     color: red;
     font-size: 8px;
     text-align: left;

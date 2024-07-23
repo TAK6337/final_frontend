@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/Register.css';
-import {useNavigate} from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import NavigationBar from "./NavigationBar";
+import SideNavBtn from "./SideNavBtn";
 
 function Register() {
     const [category, setCategory] = useState('');
@@ -34,7 +35,9 @@ function Register() {
         // 현재 날짜와 시간 설정
         setCurrentDateTime(getCurrentDateTime());
     }, []);
+
     const navigate = useNavigate();
+
     const handleCategorySelect = (category) => {
         setCategory(category);
         setFormData((prevFormData) => ({
@@ -92,10 +95,10 @@ function Register() {
     };
 
     return (
-
         <div className="register">
             <div className="register-nav-container"></div>
-            <NavigationBar/>
+            <NavigationBar />
+            <SideNavBtn />
             <div className="lost-register-banner">
                 <div className="lost-register-banner-title">분실물 등록</div>
             </div>
@@ -104,20 +107,26 @@ function Register() {
                     <div className="bread-crumb-text-2">분실물 등록</div>
                 </div>
                 <div className="bread-crumb-01">
-                    <div className="bread-crumb-text-1">분실물 서비스 관리</div>
+                    <Link to="/management" className="bread-crumb-text-1">
+                        <button>분실물 서비스 관리</button>
+                    </Link>
                 </div>
             </div>
 
-
             <div className="lost-register-upload">
                 <div className="lost-register-upload-lost-image">
-                    {imageSrc ? <img src={imageSrc} alt="Preview" id="image-preview"/> : <p id="file-name"></p>}
                     <div className="lost-register-upload-lost-image-frame">
-                        <div className="lost-register-upload-lost-image-frame-text">
-
-
-                            <input type="file" id="file-upload" onChange={handleFileChange} placeholder="파일위치열기"/>
-                        </div>
+                        {!imageSrc && (
+                            <div className="lost-register-upload-lost-image-frame-text">
+                                <input
+                                    type="file"
+                                    id="file-upload"
+                                    onChange={handleFileChange}
+                                    placeholder="파일위치열기"
+                                />
+                            </div>
+                        )}
+                        {imageSrc && <img src={imageSrc} alt="Preview" id="image-preview" />}
                     </div>
                 </div>
 
@@ -166,14 +175,14 @@ function Register() {
                         />
                     </div>
                     <div className="post-content">
-              <textarea
-                  id="postContent"
-                  rows="4"
-                  value={formData.postContent}
-                  onChange={handleInputChange}
-                  placeholder="게시글 내용 (상세한 설명)"
-                  className="post-content-textarea"
-              />
+                        <textarea
+                            id="postContent"
+                            rows="4"
+                            value={formData.postContent}
+                            onChange={handleInputChange}
+                            placeholder="게시글 내용 (상세한 설명)"
+                            className="post-content-textarea"
+                        />
                     </div>
                 </div>
 

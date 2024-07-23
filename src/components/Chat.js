@@ -55,7 +55,11 @@ function Chat() {
             <SideNavBtn/>
             <div className="chatbot-frame">
                 <div className="chatbot-header">
+
                     <img className="chatbot-header-logo" src="/images/chatbot/AIport.png"/>
+
+
+
                 </div>
                 <div className="chatbot-content">
                     <div className="chat-log">
