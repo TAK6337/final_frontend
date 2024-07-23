@@ -27,7 +27,7 @@ const PrivacyAgreement = ({setAgreed}) => {
     return (
         <div className="full-container">
             <Link to="/">
-                <img src="/images/main_logo.png" alt="AIrport 로고" className="home-logo"/>
+                <img src="/images/chatbot/AIport.png" alt="AIrport 로고" className="home-logo"/>
             </Link>
             <div className="privacy-agreement">
                 <h1>개인정보 수집 동의</h1>

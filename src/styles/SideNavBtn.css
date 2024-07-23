@@ -1,6 +1,7 @@
 .side-nav-btn,
 .side-nav-btn * {
     box-sizing: border-box;
+    z-index: 1000;
 }
 .side-nav-btn {
     width: 89px;

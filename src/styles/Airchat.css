@@ -74,7 +74,7 @@
     font-weight: bold;
 }
 
-.modal-overlay {
+.air-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -88,7 +88,7 @@
 
 }
 
-.modal-content {
+.air-modal-content {
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -107,7 +107,7 @@
 
 }
 
-.open-modal-button {
+.open-air-modal-button {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
@@ -117,6 +117,6 @@
     border-radius: 5px;
 }
 
-.open-modal-button:hover {
+.open-air-modal-button:hover {
     background-color: #007BFF;
 }

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../styles/Procedure.css';
 import NavigationBar from "./NavigationBar";
 import axios from "axios";
+import SideNavBtn from "./SideNavBtn";
 
 let lastScrollTop = 0;
 
@@ -98,6 +99,7 @@ function ServiceIntro() {
     return (
         <div className="home-div">
             <NavigationBar/>
+            <SideNavBtn/>
             <div className="home-content">
 
                 {isNextScreen ? (
