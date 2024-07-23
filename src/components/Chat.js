@@ -1,6 +1,10 @@
+import '../styles/Chat.css';
+// import '../styles/ChatTest.css';
+import { Link, useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../styles/Chat.css';  // 스타일을 정의한 CSS 파일 임포트
+import NavigationBar from "./NavigationBar";
+import SideNavBtn from '../components/SideNavBtn';
 
 function Chat() {
     const [messages, setMessages] = useState([]);
@@ -30,29 +34,44 @@ function Chat() {
     };
 
     return (
-        <div className="chat-container">
-            <div className="chat-log">
-                {messages.map((msg, index) => (
-                    <div key={index} className={`chat-message ${msg.sender}`}>
-                        <p>{msg.text}</p>
-                    </div>
-                ))}
-            </div>
-            <div className="chat-input">
-                <input
-                    type="text"
-                    value={question}
-                    onChange={(e) => setQuestion(e.target.value)}
-                    placeholder="Ask a question"
-                />
-                <button onClick={handleSubmit}>Ask</button>
-            </div>
-            {error && (
-                <div className="chat-error">
-                    <p>Error: {error.message}</p>
+        <div className="chatbot-background">
+            <NavigationBar/>
+            <SideNavBtn/>
+            <div className="chatbot-frame">
+                <div className="chatbot-header">
+                    <img className="chatbot-header-logo" src="chatbot-header-logo0.png"/>
                 </div>
-            )}
+                <div className="chatbot-content">
+                    <div className="chat-log">
+                        {messages.map((msg, index) => (
+                            <div key={index} className={`chat-message ${msg.sender}`}>
+                                <p>{msg.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="chatbot-footer">
+                    <div className="chatbot-footer-user-msg">
+                        <input
+                            className="chatbot-footer-user-msg-text"
+                            type="text"
+                            value={question}
+                            onChange={(e) => setQuestion(e.target.value)}
+                            placeholder="메세지를 입력해주세요"
+                        />
+                        <button onClick={handleSubmit}>
+                            <img
+                                className="chatbot-footer-user-msg-send-img"
+                                src="/images/airplane.png"
+                            />
+                        </button>
+
+                    </div>
+                </div>
+            </div>
         </div>
+
+
     );
 }
 

@@ -1,8 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
 
 .airchat-container {
     padding: 20px;
@@ -21,7 +16,7 @@ body {
 .subtitle {
     font-size: 28px;
     font-weight: bold;
-    color: #4CAF50;
+    color: #3f51b5;
     margin-bottom: 20px;
 }
 
@@ -43,25 +38,23 @@ body {
 .flight-status-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0 auto;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #7f8c8d; /* 테두리 추가 */
+
 }
 
 .flight-status-table th,
 .flight-status-table td {
-    border: 1px solid #ddd;
-    padding: 12px 15px;
-    text-align: left;
-    font-size: 14px;
+    border: 1px solid #7f8c8d;
+    padding: 8px;
+    text-align: center;
 }
 
 .flight-status-table th {
-    background-color: #4CAF50;
+    background-color: #3f51b5;
     color: white;
-    font-weight: bold;
+    text-align: center;
 }
 
 .flight-status-table tr:nth-child(even) {
@@ -91,39 +84,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
+
 }
 
 .modal-content {
-    background-color: #fff;
+    background: white;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: relative;
-    max-width: 600px;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.close-button {
+.close-air-button {
     position: absolute;
     top: 10px;
     right: 10px;
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 1.5em;
     cursor: pointer;
+
 }
 
 .open-modal-button {
     padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #3f51b5;
     color: white;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px;
+    border-radius: 5px;
 }
 
 .open-modal-button:hover {
-    background-color: #45a049;
+    background-color: #007BFF;
 }

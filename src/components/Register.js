@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/Register.css';
 import {useNavigate} from "react-router-dom";
+import NavigationBar from "./NavigationBar";
 
 function Register() {
     const [category, setCategory] = useState('');
@@ -93,23 +94,24 @@ function Register() {
     return (
 
         <div className="register">
+            <div className="register-nav-container"></div>
+            <NavigationBar/>
             <div className="lost-register-banner">
                 <div className="lost-register-banner-title">분실물 등록</div>
-                <div className="lost-register-banner-crumbs">
-                    <div className="banner-crumbs-lost-register">
-                        <div className="banner-crumbs-lost-register-text">분실물 간편등록</div>
-                    </div>
-                    <div className="banner-crumbs-lost">
-                        <div className="banner-crumbs-lost-text">분실물 서비스 관리</div>
-                    </div>
-                    <div className="banner-crumbs-icon">
-                    </div>
+            </div>
+            <div className="bread-crumb">
+                <div className="bread-crumb-02">
+                    <div className="bread-crumb-text-2">분실물 등록</div>
+                </div>
+                <div className="bread-crumb-01">
+                    <div className="bread-crumb-text-1">분실물 서비스 관리</div>
                 </div>
             </div>
 
+
             <div className="lost-register-upload">
                 <div className="lost-register-upload-lost-image">
-                    {imageSrc ? <img src={imageSrc} alt="Preview" id="image-preview" /> : <p id="file-name"></p>}
+                    {imageSrc ? <img src={imageSrc} alt="Preview" id="image-preview"/> : <p id="file-name"></p>}
                     <div className="lost-register-upload-lost-image-frame">
                         <div className="lost-register-upload-lost-image-frame-text">
 
