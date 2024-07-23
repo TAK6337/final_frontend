@@ -5,6 +5,7 @@ import Calendar from 'react-calendar'; // react-calendar 라이브러리 import
 import 'react-calendar/dist/Calendar.css'; // react-calendar 스타일 import
 import axios from 'axios';
 import {ChevronCompactLeft, ChevronCompactRight, ChevronDoubleLeft, ChevronDoubleRight} from "react-bootstrap-icons";
+import SideNavBtn from "./SideNavBtn";
 
 function Management() {
     // State & Refs
@@ -434,6 +435,7 @@ function Management() {
     return (
         <div className="ad-div">
             <NavigationBar/>
+            <SideNavBtn/>
             <div className="ad-entire">
                 <div className="ad-top">
                     <div className="ad-top-container">

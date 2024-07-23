@@ -39,7 +39,7 @@ function Chat() {
             <SideNavBtn/>
             <div className="chatbot-frame">
                 <div className="chatbot-header">
-                    <img className="chatbot-header-logo" src="chatbot-header-logo0.png"/>
+                    <img className="chatbot-header-logo" src="/images/logo.png"/>
                 </div>
                 <div className="chatbot-content">
                     <div className="chat-log">

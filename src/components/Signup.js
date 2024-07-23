@@ -158,7 +158,7 @@ const Signup = ({ agreed }) => {
     return (
         <div className="signup-full-container">
             <Link to="/">
-                <img src="/images/main_logo.png" alt="AIrport 로고" className="signup-home-logo"/>
+                <img src="/images/chatbot/AIport.png" alt="AIrport 로고" className="signup-home-logo"/>
             </Link>
             <div className="signup-container">
                 <h1 className="signup-title">회원가입</h1>
@@ -174,7 +174,7 @@ const Signup = ({ agreed }) => {
                             onBlur={handleUsernameBlur}
                         />
                         <div className="error-message-container">
-                            {userIDError && <p className="error-message">{userIDError}</p>}
+                            {userIDError && <p className="sign-error-message">{userIDError}</p>}
                         </div>
                     </div>
 
@@ -191,7 +191,7 @@ const Signup = ({ agreed }) => {
                             />
                         </div>
                         <div className="error-message-container">
-                            {emailError && <p className="error-message">{emailError}</p>}
+                            {emailError && <p className="sign-error-message">{emailError}</p>}
                         </div>
                     </div>
 
@@ -213,7 +213,7 @@ const Signup = ({ agreed }) => {
                             {showPassword1 ? <FaEyeSlash/> : <FaEye/>}
                         </button>
                         <div className="error-message-container">
-                            {passwordError && <p className="error-message">{passwordError}</p>}
+                            {passwordError && <p className="sign-error-message">{passwordError}</p>}
                         </div>
                     </div>
 
@@ -235,7 +235,7 @@ const Signup = ({ agreed }) => {
                             {showPassword2 ? <FaEyeSlash/> : <FaEye/>}
                         </button>
                         <div className="error-message-container">
-                            {passwordMatchError && <p className="error-message">{passwordMatchError}</p>}
+                            {passwordMatchError && <p className="sign-error-message">{passwordMatchError}</p>}
                         </div>
                     </div>
 
@@ -263,7 +263,7 @@ const Signup = ({ agreed }) => {
                             />
                         </div>
                         <div className="error-message-container">
-                            {phoneError && <p className="error-message">{phoneError}</p>}
+                            {phoneError && <p className="sign-error-message">{phoneError}</p>}
                         </div>
                     </div>
 

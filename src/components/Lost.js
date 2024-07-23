@@ -5,6 +5,7 @@ import Calendar from 'react-calendar'; // react-calendar 라이브러리 import
 import 'react-calendar/dist/Calendar.css'; // react-calendar 스타일
 import axios from 'axios';
 import { ChevronCompactLeft, ChevronCompactRight, ChevronDoubleLeft, ChevronDoubleRight } from 'react-bootstrap-icons';
+import SideNavBtn from "./SideNavBtn";
 
 
 function Lost() {
@@ -220,6 +221,7 @@ function Lost() {
     return (
         <div className="lost">
             <NavigationBar/>
+            <SideNavBtn/>
             <div className="lost-content">
                 <div className="lost-top">
                     <div className="lost-top-shadow">

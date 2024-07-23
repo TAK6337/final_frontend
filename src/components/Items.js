@@ -1,29 +1,38 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import '../styles/Items.css';
 import NavigationBar from "./NavigationBar";
-
+import SideNavBtn from "./SideNavBtn";
 
 const Items = () => {
     const [activeSection, setActiveSection] = useState('prohibited');
+    const navigate = useNavigate(); // useNavigate 훅 사용
 
     const handleNavClick = (section) => {
         setActiveSection(section);
     };
 
+    const handleChatButtonClick = () => {
+        navigate('/chat'); // chat.js로 이동
+    };
+
     return (
         <div className="items-container">
             <NavigationBar/>
+            <SideNavBtn/>
             <header className="items-header">
                 <h1 className="items-title">기내 반입 금지물품</h1>
                 <p className="items-description">
                     홈페이지 내의 정보는 참고사항으로 정확한 정보는 해당 항공사/기관/시설에 확인하여 주시기 바랍니다.
                 </p>
-                <button className="items-info-button">기내반입 금지물품 챗봇에게 물어보기
+                <button className="items-info-button" onClick={handleChatButtonClick}>
+                    기내반입 금지물품 챗봇에게 물어보기
                     <img src="/images/Items_img/chat-bot.png"
                          alt="Chat Bot"
                          className="items-info-image"/>
                 </button>
             </header>
+
 
             <nav className="items-nav">
                 <ul className="items-nav-list">
@@ -195,40 +204,40 @@ const Items = () => {
                                     </div>
                                 </div>
                             </div>
-                                <div className="electric-rules">
-                                    <div className="electric-rule">
-                                        <div className="electric-rule-title">
-                                            100Wh 초과~160Wh 이하<br/>
-                                            리튬 함량 8g 이하<br/>
-                                            (항공사 승인 필요)
-                                        </div>
-                                        <div className="electric-rule-content">
-                                            <div className="electric-rule-item">휴대, 위탁 합하여 1개</div>
-                                            <div className="electric-rule-item">2개 가능</div>
-                                            <div className="electric-rule-item">휴대, 위탁 합하여 1개</div>
-                                            <div className="electric-rule-item">운송불가</div>
-                                        </div>
+                            <div className="electric-rules">
+                                <div className="electric-rule">
+                                    <div className="electric-rule-title">
+                                        100Wh 초과~160Wh 이하<br/>
+                                        리튬 함량 8g 이하<br/>
+                                        (항공사 승인 필요)
                                     </div>
-                                    <div className="electric-rule">
-                                        <div className="electric-rule-title">
-                                            100Wh 이하, 리튬 함량 2g 이하
-                                        </div>
-                                        <div className="electric-rule-content">
-                                            <div className="electric-rule-item">5개 가능</div>
-                                            <div className="electric-rule-item">5개 가능</div>
-                                            <div className="electric-rule-item">5개 가능</div>
-                                            <div className="electric-rule-item">운송불가</div>
-                                        </div>
-                                    </div>
-                                    <div className="electric-rule">
-                                        <div className="electric-rule-title">
-                                            160Wh 초과
-                                        </div>
-                                        <div className="electric-rule-content">
-                                            <div className="electric-rule-item">운송불가</div>
-                                        </div>
+                                    <div className="electric-rule-content">
+                                        <div className="electric-rule-item">휴대, 위탁 합하여 1개</div>
+                                        <div className="electric-rule-item">2개 가능</div>
+                                        <div className="electric-rule-item">휴대, 위탁 합하여 1개</div>
+                                        <div className="electric-rule-item">운송불가</div>
                                     </div>
                                 </div>
+                                <div className="electric-rule">
+                                    <div className="electric-rule-title">
+                                        100Wh 이하, 리튬 함량 2g 이하
+                                    </div>
+                                    <div className="electric-rule-content">
+                                        <div className="electric-rule-item">5개 가능</div>
+                                        <div className="electric-rule-item">5개 가능</div>
+                                        <div className="electric-rule-item">5개 가능</div>
+                                        <div className="electric-rule-item">운송불가</div>
+                                    </div>
+                                </div>
+                                <div className="electric-rule">
+                                    <div className="electric-rule-title">
+                                        160Wh 초과
+                                    </div>
+                                    <div className="electric-rule-content">
+                                        <div className="electric-rule-item">운송불가</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div className="electric-notes">
                     <span>
@@ -296,101 +305,101 @@ const Items = () => {
 
             {activeSection === 'exception' && (
                 <section className="items-section">
-                        <div className="items-subtitle">기내 반입 제한 예외 대상 물품</div>
-                        <div className="exception-img-box">
-                            <div className="exception-top">
-                                <div className="exception-first">
-                                    <div className="pill1-box">
-                                        <img className="pill1" src="/images/Items_img/pill1.png" alt="의약품" />
-                                        <div className="pill1-text-box">
-                                            <div className="pill1-title">의약품</div>
-                                            <div className="pill1-info">
-                                                처방약품
-                                                <br />
-                                                의사 처방전이 있는 약품
-                                                <br />
-                                                <br />
-                                                시판약품
-                                                <br />
-                                                액상 감기약, 액상 위장약, 기침 억제시럽, 겔 캅셀약,
-                                                <br />
-                                                비강스프레이, 해열파스, 안약, 의료용 식염수,
-                                                <br />
-                                                콘택트 렌즈용제(보존 액)
-                                                <br />
-                                                <br />
-                                                * 비행 여정에 적합한 용량만 허용
-                                                <br />
-                                                * 보안 검색 시 신고 필요
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="exception-second">
-                                    <div className="pill2-box">
-                                        <img className="pill2" src="/images/Items_img/pill2.png" alt="비 의약품" />
-                                        <div className="pill2-text-box">
-                                            <div className="pill2-title">비 의약품</div>
-                                            <div className="pill2-info">
-                                                의료 목적으로 사용되는 얼음(이식용 장기 보관용),
-                                                <br />
-                                                혈액 또는 혈액관련 약제, 자폐증환자용 음료
-                                                <br />
-                                                * 비행 여정에 적합한 용량만 허용
-                                                <br />
-                                                * 보안 검색 시 신고 필요
-                                            </div>
+                    <div className="items-subtitle">기내 반입 제한 예외 대상 물품</div>
+                    <div className="exception-img-box">
+                        <div className="exception-top">
+                            <div className="exception-first">
+                                <div className="pill1-box">
+                                    <img className="pill1" src="/images/Items_img/pill1.png" alt="의약품"/>
+                                    <div className="pill1-text-box">
+                                        <div className="pill1-title">의약품</div>
+                                        <div className="pill1-info">
+                                            처방약품
+                                            <br/>
+                                            의사 처방전이 있는 약품
+                                            <br/>
+                                            <br/>
+                                            시판약품
+                                            <br/>
+                                            액상 감기약, 액상 위장약, 기침 억제시럽, 겔 캅셀약,
+                                            <br/>
+                                            비강스프레이, 해열파스, 안약, 의료용 식염수,
+                                            <br/>
+                                            콘택트 렌즈용제(보존 액)
+                                            <br/>
+                                            <br/>
+                                            * 비행 여정에 적합한 용량만 허용
+                                            <br/>
+                                            * 보안 검색 시 신고 필요
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="exception-bottom">
-                                <div className="exception-third">
-                                    <div className="pill3-box">
-                                        <img className="pill3" src="/images/Items_img/pill3.png" alt="특별 식이 처방 음식" />
-                                        <div className="pill3-text-box">
-                                            <div className="pill3-title">특별 식이 처방 음식</div>
-                                            <div className="pill3-info">
-                                                승객의 건강에 꼭 필요한 의사 처방전이 있는 음식
-                                                <br />
-                                                * 비행 여정에 적합한 용량만 허용
-                                                <br />
-                                                * 보안 검색 시 신고 필요
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="exception-forth">
-                                    <div className="pill4-box">
-                                        <img className="pill4" src="/images/Items_img/pill4.png" alt="어린아이 용품" />
-                                        <div className="pill4-text-box">
-                                            <div className="pill4-title">어린아이 용품</div>
-                                            <div className="pill4-info">
-                                                우유, 물, 주스, 모유, 액체 ∙ 겔 ∙ 죽 형태의 음식 및
-                                                <br />
-                                                젖어있는 티슈
-                                                <br />
-                                                * 유아 동반에 한하여 비행여정에 적합한 용량만 허용
-                                                <br />
-                                                * 보안 검색 시 신고 필요
-                                            </div>
+                            <div className="exception-second">
+                                <div className="pill2-box">
+                                    <img className="pill2" src="/images/Items_img/pill2.png" alt="비 의약품"/>
+                                    <div className="pill2-text-box">
+                                        <div className="pill2-title">비 의약품</div>
+                                        <div className="pill2-info">
+                                            의료 목적으로 사용되는 얼음(이식용 장기 보관용),
+                                            <br/>
+                                            혈액 또는 혈액관련 약제, 자폐증환자용 음료
+                                            <br/>
+                                            * 비행 여정에 적합한 용량만 허용
+                                            <br/>
+                                            * 보안 검색 시 신고 필요
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="warning-container">
-                            <div className="warning-box">
+                        <div className="exception-bottom">
+                            <div className="exception-third">
+                                <div className="pill3-box">
+                                    <img className="pill3" src="/images/Items_img/pill3.png" alt="특별 식이 처방 음식"/>
+                                    <div className="pill3-text-box">
+                                        <div className="pill3-title">특별 식이 처방 음식</div>
+                                        <div className="pill3-info">
+                                            승객의 건강에 꼭 필요한 의사 처방전이 있는 음식
+                                            <br/>
+                                            * 비행 여정에 적합한 용량만 허용
+                                            <br/>
+                                            * 보안 검색 시 신고 필요
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="exception-forth">
+                                <div className="pill4-box">
+                                    <img className="pill4" src="/images/Items_img/pill4.png" alt="어린아이 용품"/>
+                                    <div className="pill4-text-box">
+                                        <div className="pill4-title">어린아이 용품</div>
+                                        <div className="pill4-info">
+                                            우유, 물, 주스, 모유, 액체 ∙ 겔 ∙ 죽 형태의 음식 및
+                                            <br/>
+                                            젖어있는 티슈
+                                            <br/>
+                                            * 유아 동반에 한하여 비행여정에 적합한 용량만 허용
+                                            <br/>
+                                            * 보안 검색 시 신고 필요
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="warning-container">
+                        <div className="warning-box">
                                 <span>
                                     <span className="warning-title">
                                         유의사항
-                                        <br />
+                                        <br/>
                                     </span>
                                     <ul className="warning-info">
                                         <li>
                                             의사가 처방한 의약품에 대하여는 의약 상품명 또는 의사소견서를
                                             소지하고 물품의 출처를 증명하는
-                                            <br />
+                                            <br/>
                                             서류 (처방전, 약 봉투, 진단서 등)를 제시하여야 합니다.
                                         </li>
                                         <li>
@@ -414,7 +423,7 @@ const Items = () => {
                                         <li>
                                             액체류 면세품을 구매한 승객이 환승 검색대를 통과할 때 STEB에 물품과
                                             영수증이 들어있지 않으면 물품이 폐기 또는 압류 처분 됩니다.
-                                            <br />
+                                            <br/>
                                             (인천-부산 내항기 환승시에도 해당)
                                         </li>
                                         <li>
@@ -423,8 +432,8 @@ const Items = () => {
                                         </li>
                                     </ul>
                                 </span>
-                            </div>
                         </div>
+                    </div>
                 </section>
             )}
         </div>
